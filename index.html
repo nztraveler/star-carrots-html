@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="UTF-8">
+	<title>萝卜多首页</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1" >
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="/styles/index.css">
 </head>
-<body>
+<body ng-app="luoboduoApp" >
+<div class="container">
+	<div class="row" >
+	  <div>
+	  	 <span ui-sref="homePage" class="col-xs-4 col-sm-4" ><a href=""><img src="../images/nav-footer/icon.png" alt=""></a></span>
+	     <div class="col-sm-4 nav">
+	         <span ui-sref="homePage" ><a href="">首页</a></span>
+	         <span ui-sref="post" ><a href="">找职位</a></span>
+	         <span ui-sref="elite" ><a href="">找精英</a></span>
+	         <span ui-sref="about" ><a href="">关于我们</a></span>
+	     </div>
+	  </div>
+	  
+	  	<div data-ui-view=""></div>
+  	</div>
+</div>
 
+
+
+
+	<script type="text/javascript" src="/bower_components/angular.js" ></script>
+	<script type="text/javascript" src="/bower_components/angular-ui-router.js" ></script>
+	<script type="text/javascript" src="/bower_components/jquery-3.1.1.js" ></script>
+	<script type="text/javascript" src="/bower_components/jquery-3.1.1.min.js" ></script>
+	
+	<script type="text/javascript" src="/bower_components/ocLazyLoad.js" ></script>
+	<script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.js" ></script>
+	<script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.min.js" ></script>
+	<script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js" ></script>
+	<script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" ></script>
+	<script type="text/javascript" src="/scripts/luoboduoApp.js" ></script>
 </body>
 </html>
