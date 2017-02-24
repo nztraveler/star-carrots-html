@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="../styles/findJob.css">
+<main class="bg-grey">
+    <div class="container" ui-view>
+        <div class="row">
+            <!-- searchPanel部分 -->
+            <div class="search_panel_wrap">
+                <div class="search_panel hidden-xs hidden-sm">
+                    <h4><span></span>产品<img src="../images/findJobArrow.png"></h4>
+                    <ul class="panel_occupation">
+                        <li>产品经理</li>
+                        <li>移动产品经理</li>
+                        <li>产品总监</li>
+                        <li>网页产品经理</li>
+                        <li>电商产品经理</li>
+                    </ul>
+                    <div class="search_panel_detail">
+                        <ul>
+                            <li>
+                                <span class="occupation_item">产品经理</span>
+                                <span class="occupation_item">初级</span>
+                                <span class="occupation_item">中级</span>
+                                <span class="occupation_item">高级</span>
+                            </li>
+                            <li>
+                                <span class="occupation_item">移动产品经理</span>
+                                <span class="occupation_item">初级</span>
+                                <span class="occupation_item">中级</span>
+                                <span class="occupation_item">高级</span>
+                            </li>
+                            <li>
+                                <span class="occupation_item">产品总监</span>
+                                <span class="occupation_item">初级</span>
+                                <span class="occupation_item">中级</span>
+                                <span class="occupation_item">高级</span>
+                            </li>
+                            <li>
+                                <span class="occupation_item">网页产品经理</span>
+                                <span class="occupation_item">初级</span>
+                                <span class="occupation_item">中级</span>
+                                <span class="occupation_item">高级</span>
+                            </li>
+                            <li>
+                                <span class="occupation_item">电商产品经理</span>
+                                <span class="occupation_item">初级</span>
+                                <span class="occupation_item">中级</span>
+                                <span class="occupation_item">高级</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search_panel hidden-xs hidden-sm">
+                    <h4><span></span>技术<img src="../images/findJobArrow.png"></h4>
+                    <ul class="panel_occupation">
+                        <li>PHP</li>
+                        <li>JAVA</li>
+                        <li>IOS</li>
+                        <li>HTML5</li>
+                        <li>WEB前端</li>
+                        <li>Android</li>
+                    </ul>
+                </div>
+                <div class="search_panel hidden-xs hidden-sm">
+                    <h4><span></span>产品<img src="../images/findJobArrow.png"></h4>
+                    <ul class="panel_occupation">
+                        <li>产品经理</li>
+                        <li>UI设计</li>
+                        <li>APP设计</li>
+                        <li>设计总监</li>
+                        <li>交互设计师</li>
+                    </ul>
+                </div>
+            </div>
+            <!--searchCompany部分-->
+            <div class="nav_search">
+                <form class="search_bar_wrap">
+                    <div class="search_bar input-group">
+                        <label class="input-group-addon hidden-xs">公司名字</label>
+                        <input class="form-control" type="text" placeholder="请输入公司名称" ng-model="vm.companyName">
+                        <div class=" search-btn input-group-addon ">
+                            <button type="button" ui-sref="searchMain.searchCompany({'name':vm.companyName})">搜索
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <img src="../images/job_carousel_img-1.png">
+            </div>
+        </div>
+</main>

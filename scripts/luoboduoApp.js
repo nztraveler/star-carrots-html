@@ -38,4 +38,31 @@ luoboduoApp.config(function ($stateProvider, $urlRouterProvider) {
                 }]
             }
         })
+        .state("findJob", {
+            url: "/findJob",
+            templateUrl: "views/findJob.html",
+
+            resolve: {
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+
+                    return $ocLazyLoad.load('scripts/findJob.js','styles/findJob.css');
+                }]
+            }
+        })
+        .state("searchMain", {
+            // url: "/search",
+            templateUrl: "views/searchMain.html",
+
+            // resolve: {
+            //     loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+
+            //         return $ocLazyLoad.load('scripts/search.js','styles/search.css');
+            //     }]
+            // }
+        })
+        .state("searchMain.searchCompany", {
+            url: "/searchCompany",
+            templateUrl: "views/searchCompany.html",
+        })
+
 });
