@@ -1,0 +1,27 @@
+    #star-萝卜多复盘前台
+    server {
+		listen       1035;
+		server_name  localhost;
+		location / {
+			root   E:\wy\githup\star-carrots-html.git\\trunk;
+			index  index.html index.htm;
+			try_files $uri $uri/ /index.html =404;
+		}
+		location  /carrots-ajax/{
+			proxy_pass    http://dev.carrots.ptteng.com/;
+		}
+    }
+
+	#star-萝卜多复盘后台
+	server {
+		listen       1036;
+		server_name  localhost;
+		location / {
+			root   E:\wy\githup\star-carrots-admin-html.git\\trunk;
+			index  index.html index.htm;
+			try_files $uri $uri/ /index.html =404;
+		}
+		location  /carrots-admin-ajax/{
+			proxy_pass     http://dev.admin.carrots.ptteng.com/;
+		}
+	}
