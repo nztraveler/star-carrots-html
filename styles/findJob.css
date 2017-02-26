@@ -1,9 +1,3 @@
-@media screen and (max-width:960px){
-  .nav_search{
-    background-color: blue;
-    width: 100%;
-  }
-}
 *{
     margin: 0;
     padding: 0;
@@ -16,6 +10,9 @@ ul{
 span,img{
     display: inline-block;
     vertical-align: middle;
+}
+.bg-gray{
+    background-color: #F6F7F8;
 }
 .search_panel_wrap{
     float: left;
@@ -62,7 +59,8 @@ span+span{
     background-image: url("../images/product.png");
 }
 .search_panel h4 img{
-    margin-left:115px;
+    float: right;
+    margin: 1.25rem 1.25rem 0 0;
 }
 .panel_occupation{
     overflow: hidden;
@@ -103,7 +101,7 @@ span+span{
 }
 .searchV_bar input{
     outline:none;
-    border-color: none;
+    border: none;
     font-size:14px;
 }
 .search-btn{
@@ -116,6 +114,19 @@ span+span{
     border:none;
     outline:none;
     background: transparent;
-    font-size:16.6px;
+    font-size:18px;
+}
+@media screen and (max-width:991px) {
+    .nav_search {
+        width:100%;
+    }
+    .nav_search img{
+        width: 100%;
+    }
+}
+@media screen and (min-width:992px) {
+    .nav_search {
+        overflow: hidden;
+    }
 }
 

@@ -1,46 +1,34 @@
 <link rel="stylesheet" href="../styles/findJob.css">
-<main class="bg-grey">
-    <div class="container" ui-view>
+<main class="bg-gray">
+    <div ui-view>
         <div class="row">
             <!-- searchPanel部分 -->
             <div class="search_panel_wrap">
                 <div class="search_panel hidden-xs hidden-sm">
-                    <h4><span></span>产品<img src="../images/findJobArrow.png"></h4>
+                    <h4><span></span>用户体验<img src="../images/findJobArrow.png"></h4>
                     <ul class="panel_occupation">
-                        <li>产品经理</li>
-                        <li>移动产品经理</li>
-                        <li>产品总监</li>
-                        <li>网页产品经理</li>
-                        <li>电商产品经理</li>
+                        <li>产品</li>
+                        <li>UI</li>
+                        <li>QA</li>
                     </ul>
                     <div class="search_panel_detail">
                         <ul>
                             <li>
-                                <span class="occupation_item">产品经理</span>
+                                <span class="occupation_item">助理</span>
                                 <span class="occupation_item">初级</span>
                                 <span class="occupation_item">中级</span>
                                 <span class="occupation_item">高级</span>
+                                <span class="occupation_item">总监</span>
                             </li>
                             <li>
-                                <span class="occupation_item">移动产品经理</span>
+                                <span class="occupation_item">UI</span>
                                 <span class="occupation_item">初级</span>
                                 <span class="occupation_item">中级</span>
                                 <span class="occupation_item">高级</span>
+                                <span class="occupation_item">总监</span>
                             </li>
                             <li>
-                                <span class="occupation_item">产品总监</span>
-                                <span class="occupation_item">初级</span>
-                                <span class="occupation_item">中级</span>
-                                <span class="occupation_item">高级</span>
-                            </li>
-                            <li>
-                                <span class="occupation_item">网页产品经理</span>
-                                <span class="occupation_item">初级</span>
-                                <span class="occupation_item">中级</span>
-                                <span class="occupation_item">高级</span>
-                            </li>
-                            <li>
-                                <span class="occupation_item">电商产品经理</span>
+                                <span class="occupation_item">QA</span>
                                 <span class="occupation_item">初级</span>
                                 <span class="occupation_item">中级</span>
                                 <span class="occupation_item">高级</span>
@@ -49,24 +37,21 @@
                     </div>
                 </div>
                 <div class="search_panel hidden-xs hidden-sm">
-                    <h4><span></span>技术<img src="../images/findJobArrow.png"></h4>
+                    <h4><span></span>研发<img src="../images/findJobArrow.png"></h4>
                     <ul class="panel_occupation">
-                        <li>PHP</li>
-                        <li>JAVA</li>
-                        <li>IOS</li>
-                        <li>HTML5</li>
-                        <li>WEB前端</li>
                         <li>Android</li>
+                        <li>IOS</li>
+                        <li>WEB</li>
+                        <li>OP</li>
+                        <li>JAVA</li>
                     </ul>
                 </div>
                 <div class="search_panel hidden-xs hidden-sm">
-                    <h4><span></span>产品<img src="../images/findJobArrow.png"></h4>
+                    <h4><span></span>大数据<img src="../images/findJobArrow.png"></h4>
                     <ul class="panel_occupation">
-                        <li>产品经理</li>
-                        <li>UI设计</li>
-                        <li>APP设计</li>
-                        <li>设计总监</li>
-                        <li>交互设计师</li>
+                        <li>NLP</li>
+                        <li>DM</li>
+                        <li>DL</li>
                     </ul>
                 </div>
             </div>
@@ -85,4 +70,22 @@
                 <img src="../images/job_carousel_img-1.png">
             </div>
         </div>
+        <div class="row">
+            <div class="title">
+                <div class="col-xs-6 "><span>推荐职位</span><span>最新职位</span></div>
+                <div class="col-xs-6 text-right" ui-sref="">查看更多&gt</div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-3" ng-repeat="|limitTo:8"></div>
+        </div>
+        <div class="row">
+            <div class="title">
+                <div class="col-xs-6 "><span>推荐公司</span></div>
+                <div class="col-xs-6 text-right" ui-sref="">查看更多&gt</div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-3"></div>
+            <div class="col-xs-12 col-md-6 col-lg-3"></div>
+            <div class="col-xs-12 col-md-6 col-lg-3"></div>
+            <div class="col-xs-12 col-md-6 col-lg-3"></div>
+        </div>
+    </div>
 </main>
