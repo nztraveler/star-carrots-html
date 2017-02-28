@@ -24,9 +24,11 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             abstract: true, // true 表明此状态不能被显性激活，只能被子状态隐性激活
             resolve: {
                 loadMyFile: _lazyLoad([
+                    'styles/main.css'
                 ])
             }
         })
+        //主页
         .state("field.homePage", {
             url: "/homePage",
             templateUrl: "views/homePage.html",
@@ -37,6 +39,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
+        //找精英
         .state("field.elite", {
             url: "/elite",
             templateUrl: "views/elite.html",
@@ -47,7 +50,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
-
+        //关于
         .state("field.about", {
             url: "/about",
             templateUrl: "views/about.html",
@@ -62,7 +65,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state("field.findJob", {
             url: "/findJob",
             templateUrl: "views/findJob.html",
-            controller: 'findJobCtrl as vm',
+            controller: 'findJobCtrl',
             resolve: {
                 loadMyFile:_lazyLoad([
                     'scripts/controllers/findJob.js',
@@ -70,6 +73,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
+        //搜索
         .state("field.searchMain", {
             url: "/search",
             templateUrl: "views/searchMain.html",
@@ -80,9 +84,53 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
+        //搜索公司
         .state("field.searchMain.searchCompany", {
             url: "/searchCompany",
-            templateUrl: "views/searchCompany.html"
+            templateUrl: "views/searchCompany.html",
+            // resolve: {
+            //     loadMyFile:_lazyLoad([
+            //         'scripts/controllers/search.js',
+            //         'styles/search.css'
+            //     ])
+            // }
+        })
+        //搜索职位
+        .state("field.searchMain.searchJob", {
+            url: "/searchJob",
+            templateUrl: "views/searchJob.html",
+            // resolve: {
+            //     loadMyFile:_lazyLoad([
+            //         'scripts/controllers/search.js',
+            //         'styles/search.css'
+            //     ])
+            // }
+        })
+        // 职位详情
+        .state("field.jobDescription", {
+            url: "/jobDescription",
+            templateUrl: "views/jobDescription.html",
+            controller:"jobDescriptionCtrl",
+            controllerAs:"vm",
+            resolve: {
+                loadMyFile:_lazyLoad([
+                    'scripts/controllers/jobDescription.js',
+                    'styles/jobDescription.css'
+                ])
+            }
+        })
+        //公司详情
+        .state("field.companyDescription", {
+            url: "/companyDescription",
+            templateUrl: "views/companyDescription.html",
+            controller:"companyDescriptionCtrl",
+            controllerAs:"vm",
+            resolve: {
+                loadMyFile:_lazyLoad([
+                    'scripts/controllers/companyDescription.js',
+                    'styles/companyDescription.css'
+                ])
+            }
         })
 
 

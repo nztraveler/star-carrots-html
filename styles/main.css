@@ -1,0 +1,28 @@
+body{
+    background-color: #F6F7F8;
+    font-family:"Microsoft Yahei";
+}
+main{
+    background-color: white;
+}
+span,img{
+    display: inline-block;
+    vertical-align: middle;
+}
+ul{
+    margin:0;
+    list-style: none;
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+.pd-0{
+    padding: 0;
+}
+.pointer{
+    cursor:pointer;
+}
