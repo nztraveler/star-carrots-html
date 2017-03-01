@@ -5,10 +5,10 @@ body{
 main{
     background-color: white;
 }
-span,img{
-    display: inline-block;
-    vertical-align: middle;
-}
+ /*span,img{*/
+     /*display: inline-block;*/
+    /*vertical-align: middle;*/
+ /*}*/
 ul{
     margin:0;
     list-style: none;

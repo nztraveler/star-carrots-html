@@ -66,6 +66,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             url: "/findJob",
             templateUrl: "views/findJob.html",
             controller: 'findJobCtrl',
+            controllerAs:"vm",
             resolve: {
                 loadMyFile:_lazyLoad([
                     'scripts/controllers/findJob.js',
@@ -86,7 +87,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         })
         //搜索公司
         .state("field.searchMain.searchCompany", {
-            url: "/searchCompany",
+            url: "/searchCompany?name",
             templateUrl: "views/searchCompany.html",
             // resolve: {
             //     loadMyFile:_lazyLoad([
@@ -108,7 +109,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         })
         // 职位详情
         .state("field.jobDescription", {
-            url: "/jobDescription",
+            url: "/jobDescription?id",
             templateUrl: "views/jobDescription.html",
             controller:"jobDescriptionCtrl",
             controllerAs:"vm",

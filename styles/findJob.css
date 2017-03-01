@@ -152,6 +152,9 @@
     font-size: 16px;
     color: black;
 }
+.title span{
+    cursor: pointer;
+}
 .showMore{
     cursor: pointer;
 }
@@ -203,9 +206,25 @@
 .recommended-company-wrap{
     padding: 34px 0 38px 0;
 }
+.findjob-recommend-box{
+    display: flex;
+    justify-content:space-between;
+}
+.findjob-recommend-logo {
+    width: 25%;
+    height: 100px;
+    display: inline-block;
+    // margin: 0 1.5% 10px 1.5%;
+    font-size: 0;
+    padding: 6px 4px;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+    cursor:pointer;
+}
 /*简介*/
 .findjob-introduce-wrap {
-    margin: 20px 0;
+    border-top:20px solid #F6F7F8;
+    border-bottom:20px solid #F6F7F8;
 }
 .findjob-introduce-box1{
     clear:both;
@@ -223,5 +242,16 @@
 }
 .findjob-box-right{
     padding:0 18.5% 0 6%;
+}
+@media screen and (max-width:767px){
+    .findjob-introduce-wrap{
+        text-align: center;
+    }
+    .findjob-box-left,.findjob-box-right{
+        padding: 0 20%;
+    }
+    .findjob-introduce-wrap .img-responsive{
+        margin: 0 auto;
+    }
 }
 

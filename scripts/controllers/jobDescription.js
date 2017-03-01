@@ -1,7 +1,8 @@
 var myApp=angular.module("luoboduoApp",[]);
-myApp.controller("jobDescriptionCtrl", ["$scope", "$rootScope", "$state", "jobService", "commonUntil", function ($scope, $rootScope, $state, jobService, commonUntil) {
+myApp.controller("jobDescriptionCtrl", ["$scope", "$rootScope", "$state", "jobService","commonUntil", function ($scope, $rootScope, $state, jobService,commonUntil) {
     var vm = this;
     vm.id = $state.params.id;
+    console.log("id为："+vm.id);
     // 跳转本页，默认顶部
     commonUntil.scrollTo(0, 0);
     // 分享功能

@@ -1,4 +1,4 @@
-<div class="search_wrap">
+<div class="search_wrap row">
     <!-- searchPanel部分 -->
     <div class="search_panel_wrap">
         <div class="search_panel hidden-xs hidden-sm">
@@ -59,7 +59,7 @@
                 <label class="input-group-addon hidden-xs">公司名字</label>
                 <input class="form-control" type="text" placeholder="请输入公司名称" ng-model="vm.companyName">
                 <div class=" search-btn input-group-addon ">
-                    <button type="button" ui-sref="searchMain.searchCompany({'name':vm.companyName})">搜索
+                    <button type="button" ui-sref="field.searchMain.searchCompany({'name':vm.companyName})">搜索
                     </button>
                 </div>
             </div>
@@ -68,99 +68,62 @@
     </div>
 </div>
 <!--推荐职位、最新职位-->
-<div class="title">
-    <div class="col-xs-6 "><span class="title-active">推荐职位</span>&nbsp;<span>最新职位</span></div>
-    <div class="col-xs-6 text-right"><span class="showMore"  ui-sref="field.searchMain.searchJob">查看更多&gt</span></div>
+<div class="title row">
+    <div class="col-xs-6">
+    <span ng-class="{'title-active':!vm.isChoose}" ng-click="exchangeJob(!vm.isChoose)">推荐职位</span>&nbsp;
+    <span ng-class="{'title-active':vm.isChoose}" ng-click="exchangeJob(vm.isChoose)">最新职位</span>
+    </div>
+    <div class="col-xs-6 text-right"><span class="showMore" ui-sref="field.searchMain.searchJob">查看更多&gt</span></div>
 </div>
-<div class="new_job_wrap">
+<!-- 推荐职位 -->
+<div class="new_job_wrap row" ng-if="!vm.isChoose">
     <div class="findjob-list">
-        <div class="col-xs-12 col-md-6 col-lg-3 pd-0">
-            <div class="findjob-list-box" ui-sref="field.jobDescription">
+        <div class="col-xs-12 col-md-6 col-lg-3 pd-0" ng-repeat="x in vm.recommendJobList.data track by $index">
+            <div class="findjob-list-box" ui-sref="field.jobDescription({id:x.id})">
                 <div class="img-box">
-                    <img src="../images/company-logo.jpg" class="img-response">
+                    <img src="{{x.logo}}" class="img-response">
                 </div>
                 <div class="findjob-list-text">
-                    <span class="wage">8k-15k</span>
-                    <br> 视觉设计师（北京）
-                    <br> 盈泰财富云
+                    <span class="wage">{{x.compensation}}</span>
+                    <br> {{x.name}}
+                    <br> {{x.companyName}}
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-md-6 col-lg-3 pd-0">
-            <div class="findjob-list-box" ui-sref="field.jobDescription">
+    </div>
+</div>
+<!-- 最新职位 -->
+<div class="new_job_wrap row" ng-if="vm.isChoose">
+    <div class="findjob-list">
+        <div class="col-xs-12 col-md-6 col-lg-3 pd-0" ng-repeat="x in vm.newJobList.data track by $index">
+            <div class="findjob-list-box" ui-sref="field.jobDescription({id:x.id})">
                 <div class="img-box">
-                    <img src="../images/company-logo.jpg" class="img-response">
+                    <img src="{{x.logo}}" class="img-response">
                 </div>
                 <div class="findjob-list-text">
-                    <span class="wage">8k-15k</span>
-                    <br> 视觉设计师（北京）
-                    <br> 盈泰财富云
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-lg-3 pd-0">
-            <div class="findjob-list-box" ui-sref="field.jobDescription">
-                <div class="img-box">
-                    <img src="../images/company-logo.jpg" class="img-response">
-                </div>
-                <div class="findjob-list-text">
-                    <span class="wage">8k-15k</span>
-                    <br> 视觉设计师（北京）
-                    <br> 盈泰财富云
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-lg-3 pd-0">
-            <div class="findjob-list-box" ui-sref="field.jobDescription">
-                <div class="img-box">
-                    <img src="../images/company-logo.jpg" class="img-response">
-                </div>
-                <div class="findjob-list-text">
-                    <span class="wage">8k-15k</span>
-                    <br> 视觉设计师（北京）
-                    <br> 盈泰财富云
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-lg-3 pd-0">
-            <div class="findjob-list-box" ui-sref="field.jobDescription">
-                <div class="img-box">
-                    <img src="../images/company-logo.jpg" class="img-response">
-                </div>
-                <div class="findjob-list-text">
-                    <span class="wage">8k-15k</span>
-                    <br> 视觉设计师（北京）
-                    <br> 盈泰财富云
+                    <span class="wage">{{x.compensation}}</span>
+                    <br> {{x.name}}
+                    <br> {{x.companyName}}
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- 推荐公司 -->
-<div class="title">
+<div class="row title">
     <div class="col-xs-6 title-active"><span>推荐公司</span></div>
-    <div class="col-xs-6 text-right"><span class="showMore" ui-sref="field.searchMain.searchJob">查看更多&gt</span></div>
+    <div class="col-xs-6 text-right"><span class="showMore" ui-sref="field.searchMain.searchCompany">查看更多&gt</span></div>
 </div>
-<div class="recommended-company-wrap">
-    <div class="col-xs-12 col-sm-4">
+<div class="row recommended-company-wrap">
+    <div class="col-xs-12 col-md-4">
         <img src="../images/industryImg.jpg" alt="" class="img-responsive pointer" ui-sref="field.companyDescription">
     </div>
-
-    <div class="col-sm-8 col-xs-12 pd-0">
-            <div ng-class="{navChoice: $state.includes('app.companyMain.companyHome')}"
-                 class="middle-img-box findJob-recommend-logo"
-                 ng-repeat="x in vm.normalCompanyList track by $index">
-                <span></span>
-                <img src={{x.logo}} alt=""
-                     class="img-responsive"
-                     ui-sref="app.companyMain.companyHome({id:x.id})">
-            </div>
-    </div>
+    <upcarousel></upcarousel>
 </div>
 <!-- 简介 -->
-<div class="findjob-introduce-wrap">
+<div class="row findjob-introduce-wrap">
     <div class="findjob-introduce-box1">
-        <div class="col-xs-12 col-md-6 findjob-box-left">
+        <div class="col-xs-12 col-sm-6 findjob-box-left">
             <img src="../images/zjy-1fengxian.png" class="img-responsive">
         </div>
         <div class="col-xs-12 col-sm-6 findjob-box-right">
@@ -190,7 +153,6 @@
     </div>
 </div>
 <!--顶部-->
-<div class="text-center">
+<div class="row text-center">
     <img src="../images/job-bottom-img.png" alt="" class="img-responsive">
 </div>
-
