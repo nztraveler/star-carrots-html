@@ -1,117 +1,240 @@
+<link rel="stylesheet" type="text/css" href="../styles/homePage.css">
+<div ng-controller="homeCtrl">
+    <!-- 首页banner图 -->
 
-<!-- 首页banner图 -->
-<div>
-</div>
+    <!-- <div class="banner" >
+        <div ng-repeat="homeArticle in datas" >
+            <img src="{{homeArticle.img}}" alt="" href={{homeArticle.url}} >
+        </div>
+    </div> -->
 
-<!-- 简单介绍 -->
-<div class="home-introduce">
+    <div id="bn" class="carousel slide" data-ride="carousel" >
+        <div class="position-carousel-inner" >
+            <div class="carousel-inner" role="listbox">
+                <div class="clear-pd item" ng-class="{'active':$first}"
+                     ng-repeat="banners in SearchBanner track by $index">
+                    <div ng-repeat= "homeArticle in SearchBanner[$index] track by $index"
+                         class="col-lg-12 col-md-12 col-sm-12  radish-clear-pd success-case-left" >
+                        <img src="{{homeArticle.img}}" alt="" href={{homeArticle.url}} >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control left " href="#bn"
+           data-slide="prev"><p>&lsaquo;</p></a>
+        <a class="carousel-control right" href="#bn"
+           data-slide="next"><p>&rsaquo;</p></a>
+        <!--<a ng-non-bindable class="left carousel-control newjob-carousel-left" href="#bn"-->
+           <!--onclick=""-->
+           <!--role="button"-->
+           <!--data-slide="prev">-->
+                        <!--<span class="banner-pre carousel-controls" aria-hidden="true">-->
+                            <!--<img src="../images/left.png" class="img-responsive" alt="">-->
+                        <!--</span>-->
+            <!--<span class="sr-only">Previous</span>-->
+        <!--</a>-->
+        <!--<a ng-non-bindable class="right carousel-control newjob-carousel-right" href="#bn"-->
+           <!--onclick="return false"-->
+           <!--role="button"-->
+           <!--data-slide="next">-->
+                        <!--<span class="banner-next carousel-controls" aria-hidden="true">-->
+                            <!--<img src="../images/right.png" class="img-responsive" alt="">-->
+                        <!--</span>-->
+            <!--<span class="sr-only">Next</span>-->
+        <!--</a>-->
+    </div>
+
+
+    <!-- 简单介绍 -->
+    <div class="home-introduce">
+        <div class="container">
+            <div class="row text-center">
+                <div class=" col-md-3  introduce-tag">
+                    <div class="home-img"><img src="images/jianjie-1.png" alt=""></div>
+                    <p class="home-introduce-font">超短相应时间</p>
+                    <p>48小时高效推荐</p>
+                </div>
+                <div class=" col-md-3  introduce-tag">
+                    <div class="home-img"><img src="images/jianjie-2.png" alt=""></div>
+                    <p class="home-introduce-font">行业1/3的价格</p>
+                    <p>成功推荐仅收费1月工资</p>
+                </div>
+                <div class=" col-md-3  introduce-tag">
+                    <div class="home-img"><img src="images/jianjie-3.png" alt=""></div>
+                    <p class="home-introduce-font">三维的人才评测</p>
+                    <p>技术人事背景三维评定</p>
+                </div>
+                <div class=" col-md-2 home-introduce-text">
+                    <div>
+                        <p class="introduce-text-font">5家</p>
+                        <p>信赖公司</p>
+                    </div>
+                    <div>
+                        <p class="introduce-text-font">1500+</p>
+                        <p>人才库</p>
+                    </div>
+                    <div>
+                        <p class="introduce-text-font">200+</p>
+                        <p>人才入职</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 最新职位 -->
+    <div class="newjob">
     <div class="container">
-        <div class="row text-center">
-            <div class=" col-md-3  introduce-tag">
-                <div class="home-img"><img src="../images/jianjie-1.png" alt=""></div>
-                <p class="home-introduce-font">超短相应时间</p>
-                <p>48小时高效推荐</p>
-            </div>
-            <div class=" col-md-3  introduce-tag">
-                <div class="home-img"><img src="../images/jianjie-2.png" alt=""></div>
-                <p class="home-introduce-font">行业1/3的价格</p>
-                <p>成功推荐仅收费1月工资</p>
-            </div>
-            <div class=" col-md-3  introduce-tag">
-                <div class="home-img"><img src="../images/jianjie-3.png" alt=""></div>
-                <p class="home-introduce-font">三维的人才评测</p>
-                <p>技术人事背景三维评定</p>
-            </div>
-            <div class=" col-md-2 home-introduce-text">
-                <div>
-                    <p class="introduce-text-font">5家</p>
-                    <p>信赖公司</p>
-                </div>
-                <div>
-                    <p class="introduce-text-font">1500+</p>
-                    <p>人才库</p>
-                </div>
-                <div>
-                    <p class="introduce-text-font">200+</p>
-                    <p>人才入职</p>
-                </div>
-            </div>
+        <div class="home-section-title bg-f7">
+            <p class="home-section-font">最新职位</p>
+            <div class="home-section-line"></div>
+            <p> NEW POSITION</p>
         </div>
-    </div>
-</div>
-<!-- 最新职位 -->
-<!-- 服务流程 -->
-<div>
-    <div class="home-section-title">
-        <p class="home-section-font">服务流程 </p>
-        <div class="home-section-line"></div>
-        <p> SERVICE FLOW</p>
-    </div>
-    <div class="container">
-        <div class="row text-center home-service-main">
-            <div class="col-md-offset-1 col-md-2 col-xs-12 home-step">
-                <div>
-                    <img src="../images/flow-path1.png" class="img-responsive home-service-img">
-                    <p class="home-service-text">1.意向洽谈，深入评审</p>
-                </div>
-            </div>
-            <div class="col-md-2 home-service-arrow">
-                <img src="../images/arrow.png">
-            </div>
-            <div class="col-md-2 col-xs-12 home-step">
-                <div>
-                    <img src="../images/flow-path2.png" class="img-responsive home-service-img">
-                    <p class="home-service-text">2.确认合作，签订合同</p>
-                </div>
-            </div>
-            <div class="col-md-2 home-service-arrow">
-                <img src="../images/arrow.png">
-            </div>
-            <div class="col-md-2 col-xs-12 home-step">
-                <div>
-                    <img src="../images/flow-path3.png" class="img-responsive home-service-img">
-                    <p class="home-service-text"> 3.提出需求，提供jd</p>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center home-service-main">
-            <div class="col-md-offset-1 col-md-2  col-xs-12 home-step">
-                <div>
-                    <img src="../images/flow-path4.png" class="img-responsive home-service-img">
-                    <p class="home-service-text">4.开始招聘，人才精选</p>
-                </div>
-            </div>
-            <div class="col-md-2 home-service-arrow">
-                <img src="../images/arrow.png">
-            </div>
-            <div class="col-md-2 col-xs-12 home-step">
-                <div>
-                    <img src="../images/flow-path5.png" class="img-responsive home-service-img">
-                    <p class="home-service-text">5.人才评测，简历脱水</p>
-                </div>
-            </div>
-            <div class="col-md-2 home-service-arrow">
-                <img src="../images/arrow.png">
-            </div>
-            <div class="col-md-2 col-xs-12 home-step">
-                <div>
-                    <img src="../images/flow-path6.png" class="img-responsive home-service-img">
-                    <p class="home-service-text"> 6.上岗，转入售后</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 伙伴之言 -->
- <div class="home-comment bg-f7">
-    <div class="home-section-title ">
-        <p class="home-section-font">伙伴之言</p>
-        <div class="home-section-line"></div>
-        <p> PARTNER ADVICE</p>
-    </div>
-    <div class="container friend-box">
-        <!-- 伙伴之言轮播 -->
-        <jqcarouse></jqcarouse>
-    </div>
+        <div class="home-section-newJob bg-f7">
+            <!--<div class="container">-->
+                <div class="home-newJob-main" >
+                    <a class="home-newJob-more more-hover" href="#"
 
-</div> 
+                       ng-class="">更多&nbsp;>
+                    </a>
+                    <br>
+                    <!--轮播2号-->
+                    <div id="success-case" class="carousel slide" data-ride="carousel" >
+                        <div class="position-carousel-inner" >
+                            <div class="carousel-inner" role="listbox">
+                                <div class="clear-pd item" ng-class="{'active':$first}"
+                                     ng-repeat="indexbanner in SearchJobList track by $index">
+                                    <div ng-repeat="indexone in SearchJobList[$index] track by $index"
+                                         class="col-lg-3 col-md-3 col-sm-12  radish-clear-pd success-case-left" >
+                                        <div class="home-listbox" >
+                                            <div class="middle-img-box" >
+                                                <span></span>
+                                                <img src={{indexone.logo}} alt=""
+                                                     class="img-responsive">
+                                            </div>
+                                            <div class="font-box" style="min-height:130px;">
+                                                <p class="home-newJob-name mg-0  word-length-limit">{{indexone.name}}</p>
+                                                <div class="home-listbox-line"></div>
+                                                <p class="home-newJob-company word-length-limit">
+                                                    {{indexone.companyName}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!--Controls-->
+                        <!--<a ng-non-bindable class="left carousel-control friend-carousel-hide" href="#success-case"-->
+                               <!--onclick=""-->
+                               <!--role="button"-->
+                               <!--data-slide="prev">-->
+                        <!--<span class="friend-banner-pre banner-pre carousel-controls" aria-hidden="true">-->
+                            <!--<img src="../images/left.png" class="img-responsive" alt="">-->
+                        <!--</span>-->
+                        <!--<span class="sr-only">Previous</span>-->
+                    <!--</a>-->
+                        <!--<a ng-non-bindable class="right carousel-control friend-carousel-hide" href="#success-case"-->
+                           <!--onclick="return false"-->
+                           <!--role="button"-->
+                           <!--data-slide="next">-->
+                        <!--<span class="friend-banner-next banner-next carousel-controls" aria-hidden="true">-->
+                            <!--<img src="../images/right.png" class="img-responsive" alt="">-->
+                        <!--</span>-->
+                            <!--<span class="sr-only">Next</span>-->
+                        <!--</a>-->
+                        <a class="carousel-control left newjob-carousel-left" href="#success-case"
+                           data-slide="prev"><p><img src="../images/left.png" class="img-responsive" alt=""></p></a>
+                        <a class="carousel-control right newjob-carousel-right" href="#success-case"
+                           data-slide="next"><p><img src="../images/right.png" class="img-responsive" alt=""></p></a>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!--</div>-->
+
+    <!-- 服务流程 -->
+    <div class="container">
+        <div class="home-section-title">
+            <p class="home-section-font">服务流程 </p>
+            <div class="home-section-line"></div>
+            <p> SERVICE FLOW</p>
+        </div>
+        <div class="container">
+            <div class="row text-center home-service-main">
+                <div class="col-md-offset-1 col-md-2 col-xs-12 home-step">
+                    <div>
+                        <img src="images/flow-path1.png" class="img-responsive home-service-img">
+                        <p class="home-service-text">1.意向洽谈，深入评审</p>
+                    </div>
+                </div>
+                <div class="col-md-2 home-service-arrow">
+                    <img src="images/arrow.png">
+                </div>
+                <div class="col-md-2 col-xs-12 home-step">
+                    <div>
+                        <img src="images/flow-path2.png" class="img-responsive home-service-img">
+                        <p class="home-service-text">2.确认合作，签订合同</p>
+                    </div>
+                </div>
+                <div class="col-md-2 home-service-arrow">
+                    <img src="images/arrow.png">
+                </div>
+                <div class="col-md-2 col-xs-12 home-step">
+                    <div>
+                        <img src="images/flow-path3.png" class="img-responsive home-service-img">
+                        <p class="home-service-text"> 3.提出需求，提供jd</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center home-service-main">
+                <div class="col-md-offset-1 col-md-2  col-xs-12 home-step">
+                    <div>
+                        <img src="images/flow-path4.png" class="img-responsive home-service-img">
+                        <p class="home-service-text">4.开始招聘，人才精选</p>
+                    </div>
+                </div>
+                <div class="col-md-2 home-service-arrow">
+                    <img src="images/arrow.png">
+                </div>
+                <div class="col-md-2 col-xs-12 home-step">
+                    <div>
+                        <img src="images/flow-path5.png" class="img-responsive home-service-img">
+                        <p class="home-service-text">5.人才评测，简历脱水</p>
+                    </div>
+                </div>
+                <div class="col-md-2 home-service-arrow">
+                    <img src="images/arrow.png">
+                </div>
+                <div class="col-md-2 col-xs-12 home-step">
+                    <div>
+                        <img src="images/flow-path6.png" class="img-responsive home-service-img">
+                        <p class="home-service-text"> 6.上岗，转入售后</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 伙伴之言 -->
+    <!--<div class="container">-->
+        <div class="home-comment bg-f7">
+            <div class="home-section-title ">
+                <p class="home-section-font">伙伴之言</p>
+                <div class="home-section-line"></div>
+                <p> PARTNER ADVICE</p>
+            </div>
+            <div class="container friend-box">
+                <!-- 伙伴之言轮播 -->
+
+                <div class="partner-carousel">
+                    <jqcarouse></jqcarouse>
+                </div>
+
+        </div>
+
+    </div>
+</div>

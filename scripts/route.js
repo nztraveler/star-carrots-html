@@ -24,25 +24,28 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             abstract: true, // true 表明此状态不能被显性激活，只能被子状态隐性激活
             resolve: {
                 loadMyFile: _lazyLoad([
-                    'styles/main.css'
+                    'styles/index.css',
                 ])
             }
         })
-        //主页
         .state("field.homePage", {
             url: "/homePage",
             templateUrl: "views/homePage.html",
+            controller:"homeCtrl",
             resolve: {
                 loadMyFile:_lazyLoad([
-                    'styles/homePage.css'
+                    'styles/homePage.css',
+                    'scripts/controllers/homePage.js',
+                    'jqcarouse',
 
                 ])
             }
         })
-        //找精英
         .state("field.elite", {
             url: "/elite",
             templateUrl: "views/elite.html",
+            controller:"eliteCtrl",
+            controlleAs:"vm",
             resolve: {
                 loadMyFile:_lazyLoad([
                     'scripts/controllers/elite.js',
@@ -50,9 +53,9 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
-        //关于
+
         .state("field.about", {
-            url: "/about",
+            url: "/about?status",
             templateUrl: "views/about.html",
             resolve: {
                 loadMyFile:_lazyLoad([
@@ -65,8 +68,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state("field.findJob", {
             url: "/findJob",
             templateUrl: "views/findJob.html",
-            controller: 'findJobCtrl',
-            controllerAs:"vm",
+            controller: 'findJobCtrl as vm',
             resolve: {
                 loadMyFile:_lazyLoad([
                     'scripts/controllers/findJob.js',
@@ -74,7 +76,6 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
-        //搜索
         .state("field.searchMain", {
             url: "/search",
             templateUrl: "views/searchMain.html",
@@ -85,53 +86,9 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
-        //搜索公司
         .state("field.searchMain.searchCompany", {
-            url: "/searchCompany?name",
-            templateUrl: "views/searchCompany.html",
-            // resolve: {
-            //     loadMyFile:_lazyLoad([
-            //         'scripts/controllers/search.js',
-            //         'styles/search.css'
-            //     ])
-            // }
-        })
-        //搜索职位
-        .state("field.searchMain.searchJob", {
-            url: "/searchJob",
-            templateUrl: "views/searchJob.html",
-            // resolve: {
-            //     loadMyFile:_lazyLoad([
-            //         'scripts/controllers/search.js',
-            //         'styles/search.css'
-            //     ])
-            // }
-        })
-        // 职位详情
-        .state("field.jobDescription", {
-            url: "/jobDescription?id",
-            templateUrl: "views/jobDescription.html",
-            controller:"jobDescriptionCtrl",
-            controllerAs:"vm",
-            resolve: {
-                loadMyFile:_lazyLoad([
-                    'scripts/controllers/jobDescription.js',
-                    'styles/jobDescription.css'
-                ])
-            }
-        })
-        //公司详情
-        .state("field.companyDescription", {
-            url: "/companyDescription",
-            templateUrl: "views/companyDescription.html",
-            controller:"companyDescriptionCtrl",
-            controllerAs:"vm",
-            resolve: {
-                loadMyFile:_lazyLoad([
-                    'scripts/controllers/companyDescription.js',
-                    'styles/companyDescription.css'
-                ])
-            }
+            url: "/searchCompany",
+            templateUrl: "views/searchCompany.html"
         })
 
 

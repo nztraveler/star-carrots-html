@@ -19,12 +19,8 @@ angular.module("luoboduoApp")
 
 			//2 职业详情
 			professionDetail: function (id) {
-			  return $http.get(path.professionDetail())
-			},
-			//3 按职位分类
-			professionSort:function(){
-				return $http.get(path.professionSort())
-			},
+				return	$http.get(path.professionDetail())
+			}
 
 		}
 	}])

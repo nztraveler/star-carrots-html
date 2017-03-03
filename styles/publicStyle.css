@@ -1,0 +1,604 @@
+@charset "utf-8";
+/*改变input框提示文字颜色*/
+input::-webkit-input-placeholder {
+    color: #D6D0CA !important;
+}
+
+input:-moz-placeholder {
+    　　color: #D6D0CA !important;
+}
+
+.pd-0, body, p {
+    padding: 0
+}
+
+/*margin*/
+.mg-0 {
+    margin: 0;
+}
+
+.mg-left-right-20, .mg-right-20 {
+    margin-right: 20px
+}
+
+.mg-top--20 {
+    margin-top: -20px;
+}
+
+.mg-left-5 {
+    margin-left: 5px
+}
+
+.mg-right-0 {
+    margin-right: 0 !important;
+}
+
+.mg-top-6 {
+    margin-top: 6px;
+}
+
+.mg-top-10 {
+    margin-top: 10px;
+}
+
+.mg-top-15 {
+    margin-top: 15px;
+}
+
+.mg-top-20 {
+    margin-top: 20px
+}
+
+.mg-bot-20 {
+    margin-bottom: 20px
+}
+
+.mg-left-20 {
+    margin-left: 20px
+}
+
+.mg-left-right-20 {
+    margin-left: 20px
+}
+
+.mg-top-bot-70 {
+    margin-top: 70px !important;
+    margin-bottom: 70px !important
+}
+
+.mg-top-bot-90 {
+    margin-top: 90px !important;
+    margin-bottom: 90px !important
+}
+
+.mg-top-bot-100 {
+    margin-top: 100px !important;
+    margin-bottom: 100px !important
+}
+
+.mg-left-15 {
+    margin-left: 15px;
+}
+
+.mg-left-10 {
+    margin-left: 10px;
+}
+
+.mg-top-bot-110 {
+    margin-top: 110px !important;
+    margin-bottom: 110px !important
+}
+
+.mg-bot-50 {
+    margin-bottom: 50px
+}
+
+.mg-bot-65 {
+    margin-bottom: 65px
+}
+
+.mg-left-right-10 {
+    margin: 0 6px 0 6px !important;
+}
+
+/*padding*/
+.pd-10 {
+    padding: 10px 0;
+}
+
+.pd-bottom-30 {
+    padding-bottom: 30px
+}
+
+.pd-bottom-100 {
+    padding-bottom: 100px
+}
+
+.pd-top-20 {
+    padding-top: 20px
+}
+
+/*背景颜色*/
+.bg-f7 {
+    background-color: #f7f7f7 !important
+}
+
+.bg-fff {
+    background-color: #fff
+}
+
+.bg-grey {
+    background-color: #f6f7f8 !important
+}
+
+.bg-fa {
+    background-color: #fafafa !important
+}
+
+/*字体颜色*/
+.font-536a82 {
+    color: #536a82
+}
+
+.font-2b3d51 {
+    color: #2b3d51
+}
+
+/*字体宽度*/
+.font-bold {
+    font-weight: bold;
+}
+
+/*宽度*/
+.width5 {
+    width: 5%
+}
+
+.width8 {
+    width: 8%
+}
+
+.right-company-name {
+    margin: 0;
+    color: #2d3e50;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-btn, .search-content {
+    overflow: hidden
+}
+
+.company-main:hover, .search-rowBox:hover {
+    box-shadow: 0 0 7px #E2E2E2;
+    border: solid 1px #f5f5f5;
+}
+
+body {
+    font-family: "Microsoft YaHei";
+}
+
+.screen-panel a {
+    text-decoration: none
+}
+
+.screen-panel {
+    background-color: #fff
+}
+
+.search-panel {
+    padding: 15px 20px
+}
+
+.keyword-search {
+    width: 40%;
+    display: inline-block
+}
+
+.defaultChoice {
+    background-color: #EB5255;
+    color: #fff !important;
+    margin: 0 5px
+}
+
+.subDefaultChoice {
+    background-color: #EB5255;
+    color: #fff !important;
+    margin: 0 5px
+}
+
+.form-group > a {
+    padding: 3px 13px;
+    color: #536a82;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.form-group:last-child {
+    margin-bottom: 0
+}
+
+.search-panel form div label {
+    color: #2d3e50
+}
+
+.search-btn > button {
+    display: inline-block;
+    padding: 3px 16px;
+    margin-left: 20px;
+    border: none
+}
+
+.clear-search {
+    color: #536a82;
+    vertical-align: bottom;
+    margin-top: 15px;
+    background-color: #fff
+}
+
+.middle-img-box img, .middle-img-box span {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 90%;
+    max-height: 100%;
+}
+
+.begin-search {
+    background-color: #EB5255;
+    margin-top: 15px;
+    color: #fff
+}
+
+.search-content {
+    margin: 20px auto;
+    background-color: #fff
+}
+
+.search-oneRow {
+    padding: 20px 20px 0
+}
+
+.search-rowBox {
+    display: block;
+    margin-left: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+    .search-roxLift {
+        border-right: 1px solid #DDD
+    }
+}
+
+.left-jobName {
+    display: inline-block;
+    color: #2b3d51;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.left-time {
+    display: inline-block;
+    color: #999;
+    text-indent: 1rem
+}
+
+.company-content, .right-company {
+    display: -webkit-box;
+    display: -ms-flexbox
+}
+
+.left-payroll {
+    margin: 15px 0;
+    color: #fc2a48;
+    font-weight: 700;
+}
+
+.company-type, .left-jobmsg {
+    color: #536a82
+}
+
+.right-company {
+    display: flex
+}
+
+.company-nameBox > span:first-child {
+    border: 0
+}
+
+.company-typeBox {
+    margin: 15px 0 15px -10px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.company-type {
+    line-height: 14px;
+    display: inline-block;
+    padding: 0 10px;
+    border-left: 1px solid #d9d9d9
+}
+
+.company-type:first-child {
+    border: none
+}
+
+.company-welfare {
+    height: 22px;
+    overflow: hidden;
+}
+
+.more-hover:hover {
+    color: #2d3e50;
+    text-decoration: none;
+}
+
+.company-welfare > span {
+    line-height: 20px;
+    color: #536a82;
+    border: 1px solid #d9d9d9;
+    margin-right: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    min-width: 70px;
+    text-align: center;
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.companyLogo, .middle-img-box {
+    border: 1px solid #E8E8E8
+}
+
+.middle-img-box {
+    height: 110px;
+    width: 110px;
+    font-size: 0;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+.middle-img-box span {
+    height: 100%;
+    width: 0;
+    overflow: hidden
+}
+
+.company-listBox {
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+.company-list {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.company-card {
+    padding: 20px
+}
+
+.company-main {
+    padding: 0;
+    cursor: pointer;
+}
+
+.company-content {
+    text-align: center;
+    display: flex;
+    margin: 22px
+}
+
+.company-content > div:nth-child(3) {
+    font-size: 18px
+}
+
+.company-content > div:last-child {
+    margin-left: 22px;
+    text-align: left
+}
+
+.companyName {
+    font-size: 16px;
+    color: #2d3e50;
+    font-weight: 700;
+    margin: 16px 0 8px
+}
+
+.company-slogan {
+    font-size: 14px;
+    color: #536a82;
+    margin: 12px 0
+}
+
+.company-jobNumBox {
+    font-size: 14px;
+    color: #999;
+    margin: 8px 0
+}
+
+.company-jobNum {
+    color: #FC3652;
+    font-weight: 700
+}
+
+.companyList-welfare {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.companyList-welfare > span {
+    color: #999;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    padding: 10px 0
+}
+
+.companyList-welfare > span > img {
+    display: inline-block;
+    margin: 1px 3px;
+    vertical-align: sub
+}
+
+.welfare {
+    display: inline-block;
+    color: #536a82;
+    max-width: 90%;
+    min-width: 26%;
+    margin: 20px 8px 0 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .company-nameBox, .right-company .col-xs-9, .company-welfare {
+        padding: 0
+    }
+}
+
+.detail-welfare {
+    display: inline-block;
+    color: #536a82;
+    margin: 12px 8px 0;
+    text-align: center;
+}
+
+.scale {
+    padding: 20px 0 20px 40px;
+    word-break: break-all;
+}
+
+.scale-text {
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.font-14 {
+    font-size: 14px !important;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+/*内容过长用...代替*/
+.word-length-limit {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.word-length-limit2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.word-length-limit-2 {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+
+.search-remind-word {
+    color: #999999;
+}
+
+/*搜索公司页面和公司列表页面的公司box内容宽度，用来实现内容过长用...代替*/
+@media screen and (min-width: 1200px) {
+    .companybox-content {
+        width: 54%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .companybox-content {
+        width: 42%;
+    }
+}
+
+@media screen and (max-width: 998px) {
+    .companybox-content {
+        width: 54%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .companybox-content {
+        width: 70%;
+    }
+}
+
+/*分页指令*/
+.paginationGo {
+    width: 32px;
+    height: 34px;
+    border: solid 1px #e8e8e8;
+    border-radius: 3px;
+}
+
+div > ul.pagination > li > a {
+    border-radius: 3px;
+    margin: 0 4px;
+    border: solid 1px #e8e8e8;
+    color: #666666;
+    background-color: #f5f5f7;
+}
+
+.isclicked-status {
+    color: #cccccc !important;
+}
+
+.pagination-font-color {
+    color: #666666;
+}
+
+.pagination > .active > a, .pagination > .active > a:focus {
+    background-color: #fc2b47;
+    border-color: #fc2b47;
+}
+
+/*轮播*/
+.carousel-butten {
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-indicators > li {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.carousel-inner > .item > img {
+    width: 100%;
+}
+
+.edit-area-text {
+    background-color: white;
+    border: none;
+    width: 100%;
+    white-space: pre-wrap;
+    color: #536a82;
+    text-align: justify;
+}
+

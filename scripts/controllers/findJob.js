@@ -20,10 +20,10 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
                 if(res.data.code==0){
                     vm.newJobList = res.data;
                 }
-             }
-            );
+            }
+        );
         // 获取推荐职位数据
-       jobService.professionList(vm.params).then(function (res) {
+        jobService.professionList(vm.params).then(function (res) {
             if (res.data.code == 0) {
                 vm.recommendJobList = res.data;
             }

@@ -17,10 +17,7 @@ angular.module('luoboduoApp')
             professionDetail: function (id) {
                 return "/carrots-ajax/a/profession/" + id;
             },
-            //3 职位分类
-            professionSort:function(){
-                return "../service/professionSort.json"
-            },
+
             //三 公司
             //1 公司列表
             companyList: function () {
