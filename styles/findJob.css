@@ -1,76 +1,102 @@
+.search_wrap{
+    display: flex;
+    display: -webkit-flex;
+}
 .search_panel_wrap {
-    float: left;
-    overflow: hidden;
-    width: 20%;
+    position: relative;
+    flex: 1;
     background-color: #F44A61;
     color: white;
 }
-
-.search_panel {
-    position: relative;
-    margin: 0;
-    padding-left: 20px;
-    height: 152px;
+.search_panel_wrap:hover{
+    border-top: 1px solid #F44A61;
+    border-bottom: 1px solid #F44A61;
 }
-
+.search_panel {
+    margin: 0;
+    height: 33.33%;
+}
+.search_panel_wrap:hover .search_panel_detail{
+    border: 1px solid #F44A61;
+    border-left: none;
+}
 .search_panel_detail {
     display: none;
     position: absolute;
     z-index: 999;
     top: 0;
     left: 100%;
-    width: 300%;
-    height: 300%;
+    padding: 20px 0 30px 40px;
+    width: 320%;
+    height: 100%;
     background-color: white;
 }
-
-.occupation_item {
-    padding: 0 1rem;
-    line-height: 1.25rem;
-    font-size: 1.25rem;
+.occupation_box {
+    padding:.5rem 0;
+    line-height: 120%;
+    font-size: 14px;
+    color: #fc2b47;
 }
 
-.search_panel_detail span + span {
-    border-left: 1px solid #e8e8e8;
-    font-size: 16px;
-    color: #5f6c7a;
+.occupation_box> span{
+    display: inline-block;
+    box-sizing: border-box;
+    padding:0 12px;
+    width: 72px;
+    border-left:1px solid #E9E9E9;
+    color: #23527c;
 }
-
-.search_panel h4 {
-    clear: both;
+.occupation_box> span:nth-child(1){
+    color: #fc2b47;
+    border-left: none;
+    text-align: right;
+}
+.occupation_box> span:nth-child(2){
+    border-left: none;
+}
+.occupation_box> span:hover{
+    color:#fc2b47;
+}
+.search_panel>p {
     margin: 0;
+    padding-left: 20px;
     line-height: 50px;
-    font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.search_panel h4 span {
+.search_panel>p>.jobType {
+    float: left;
+    margin-top: 17px;
     padding: 10px;
     margin-right: 10px;
-    background-image: url("../images/product.png");
+    background: url("../images/product.png") no-repeat center center;
 }
-
-.search_panel h4 img {
-    float: right;
-    margin: 1.25rem 1.25rem 0 0;
+.search_panel:hover >p>.jobType{
+    background-image: url("../images/productRed.png");
 }
-
+.search_panel>p>.arrow {
+    margin-top: 13px;
+    padding: 10px;
+    margin-right: 10px;
+    background: url("../images/findJobArrow.png")  no-repeat  center center;
+}
+.search_panel:hover >p>.arrow{
+    background-image: url("../images/findJobArrowRed.png");
+}
 .panel_occupation {
-    overflow: hidden;
+    padding-left: 0;
 }
 
-.panel_occupation li {
-    float: left;
-    padding-right: 20px;
-    margin-bottom: 16px;
+.panel_occupation span {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 200%;
 }
-
 .search_panel:hover {
     background-color: white;
     color: #F44A61;
     cursor: pointer;
 }
-
 .search_panel:hover .search_panel_detail {
     display: block;
     color: #F44A61;
@@ -78,10 +104,8 @@
 
 .nav_search {
     position: relative;
-    float: left;
-    width: 80%;
+    flex: 4;
 }
-
 .search_bar_wrap {
     position: absolute;
     left: 0;
@@ -93,7 +117,12 @@
     border-radius: 10px;
     background-color: rgba(0, 0, 0, .3);
 }
-
+@media screen and (max-width: 767px){
+    .search_bar_wrap{
+        top:5.2%;
+        padding:2.34%;
+    }
+}
 .search_bar label {
     background-color: white;
     font-weight: bold;
@@ -118,23 +147,6 @@
     background: transparent;
     font-size: 18px;
 }
-
-@media screen and (max-width: 991px) {
-    .nav_search {
-        width: 100%;
-    }
-
-    .nav_search img {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .nav_search {
-        overflow: hidden;
-    }
-}
-
 /*推荐/最新职位*/
 .title {
     clear:both;
@@ -179,7 +191,6 @@
     box-shadow: 0 0 7px #dae0e3;
     border-color: #f5f5f5;
 }
-
 .img-box {
     border: 1px solid #e9e9e9;
     width: 110px;
@@ -190,36 +201,147 @@
     max-width: 90%;
     max-height: 100%;
 }
-
+.findjob-list-box>.word-limit {
+    flex: 1;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
 .findjob-list-text {
     padding-top: 16px;
     padding-left: 20px;
     width: 50%;
     text-overflow: ellipsis;
 }
-
 .wage {
     color: #fc2b47;
     font-size: 16px;
 }
 /*推荐公司*/
-.recommended-company-wrap{
+.recommend-company-wrap{
     padding: 34px 0 38px 0;
 }
 .findjob-recommend-box{
-    display: flex;
-    justify-content:space-between;
+    position: relative;   
 }
-.findjob-recommend-logo {
-    width: 25%;
-    height: 100px;
+.redomend-company-text {
+    position: absolute;
+    bottom: 0;
+    padding: 0 10px;
+}
+.color-white{
+    color: white;
+}
+.redomend-company-item{
+    display: flex;
+    display: -webkit-flex;
+}
+.redomend-company-item>span {
     display: inline-block;
-// margin: 0 1.5% 10px 1.5%;
-    font-size: 0;
-    padding: 6px 4px;
-    border: 1px solid #E8E8E8;
-    border-radius: 5px;
-    cursor:pointer;
+    flex: 1;
+    -webkit-flex: 1;
+    text-align: center;
+    line-height: 150%;
+    padding: 2px 20px 2px 0;
+    color: white;
+}
+
+.redomend-company-item>span>img {
+    margin: 0 6px 4px 0;
+}
+.redomend-company-item span.word-limit {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+/*竖向轮播*/
+.hot-company-box{
+    display: flex;
+    display: -webkit-flex;
+    padding: 8px 16px;
+    margin-top: 34px;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.hot-company-box>.company-introduce{
+    display: flex;
+    flex: 1;
+    align-self: center;
+    box-sizing: border-box;
+    padding-right: 14px;
+    border-right: 1px solid #e9e9e9;
+}
+.company-text{
+    flex: 1;
+    padding-left: 30px;
+}
+.company-text p{
+    margin-bottom: 0;
+}
+.hot-company-box .company-name{
+    font-size: 18px;
+    font-weight: 700;
+}
+.hot-company-box .searchJob{
+    font-size: 14px;
+    color: #536a82;
+}
+.hot-company-box .company-tag{
+    margin-bottom: 0;
+}
+.hot-company-box .company-tag span{
+    display: inline-block;
+    padding: 6px 10px;
+    margin-right: 12px;
+    border: 1px solid #e9e9e9;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #536a82;
+}
+.hot-company-box .job-introduce{
+    flex: 1;
+    align-self: center;
+    box-sizing: border-box;
+    padding: 0 14px 0 28px;
+}
+.hot-company-box .searching{
+    font-size: 18px;
+    padding-bottom: 24px;
+    font-weight: 700;
+}
+.hot-company-box .occupation>span{
+    display: inline-block;
+    padding: 0 14px;
+    font-size: 16px;
+    color: #536a82;
+    border-right: 1px solid #e9e9e9; 
+}
+.hot-company-box .occupation>span:nth-last-child(1){
+    border-right: none;
+}
+@media screen and (max-width: 767px){
+    .hot-company-box{
+        display: block;
+    }
+    .hot-company-box .company-introduce{
+        border-right: none;
+    }
+    .hot-company-box .img-box{
+        display: none;
+    }
+    .hot-company-box .company-text{
+        padding-left: 0;
+    }
+    .hot-company-box .job-introduce{
+        padding: 0;
+        margin-top: 28px;
+    }
+    .hot-company-box .company-tag>span,.hot-company-box .occupation>span{
+        margin: 5px 0;
+    }
 }
 /*简介*/
 .findjob-introduce-wrap {

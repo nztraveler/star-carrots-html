@@ -71,6 +71,9 @@ span,img{
     color:black;
     font-size:16px;
 }
+.jobDescription-detail>ul{
+    padding-bottom: 24px;
+}
 .company-msg>img{
     margin: 0 auto;
     max-width: 149px;

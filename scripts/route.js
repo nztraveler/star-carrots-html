@@ -68,7 +68,8 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state("field.findJob", {
             url: "/findJob",
             templateUrl: "views/findJob.html",
-            controller: 'findJobCtrl as vm',
+            controller: 'findJobCtrl',
+            controllerAs:"vm",
             resolve: {
                 loadMyFile:_lazyLoad([
                     'scripts/controllers/findJob.js',
@@ -76,21 +77,67 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
+        //搜索
         .state("field.searchMain", {
             url: "/search",
             templateUrl: "views/searchMain.html",
+            controller:"searchMainCtrl",
+            controllerAs:"vm",
             resolve: {
                 loadMyFile:_lazyLoad([
-                    'scripts/controllers/search.js',
-                    'styles/search.css'
+                    'scripts/controllers/searchMain.js',
+                    'styles/searchMain.css'
                 ])
             }
         })
+        //搜索公司
         .state("field.searchMain.searchCompany", {
-            url: "/searchCompany",
-            templateUrl: "views/searchCompany.html"
+            url: "/searchCompany?name",
+            templateUrl: "views/searchCompany.html",
+            resolve: {
+                loadMyFile:_lazyLoad([
+                    // 'scripts/controllers/search.js',
+                    'styles/searchCompany.css'
+                ])
+            }
         })
-
+        //搜索职位
+        .state("field.searchMain.searchJob", {
+            url: "/searchJob",
+            templateUrl: "views/searchJob.html",
+            resolve: {
+                loadMyFile:_lazyLoad([
+                    // 'scripts/controllers/search.js',
+                    'styles/searchJob.css'
+                ])
+            }
+        })
+        // 职位详情
+        .state("field.jobDescription", {
+            url: "/jobDescription?id&companyId&name",
+            templateUrl: "views/jobDescription.html",
+            controller:"jobDescriptionCtrl",
+            controllerAs:"vm",
+            resolve: {
+                loadMyFile:_lazyLoad([
+                    'scripts/controllers/jobDescription.js',
+                    'styles/jobDescription.css'
+                ])
+            }
+        })
+        //公司详情
+        .state("field.companyDescription", {
+            url: "/companyDescription",
+            templateUrl: "views/companyDescription.html",
+            controller:"companyDescriptionCtrl",
+            controllerAs:"vm",
+            resolve: {
+                loadMyFile:_lazyLoad([
+                    'scripts/controllers/companyDescription.js',
+                    'styles/companyDescription.css'
+                ])
+            }
+        })
 
 
 

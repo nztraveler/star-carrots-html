@@ -1,32 +1,29 @@
 angular.module('luoboduoApp')
-    .factory('path', ['commonUtil', function (commonUtil) {
+    .factory('path', function($http, $state) {
         return {
-            //一 banner
-            //1 banner列表
-            articleList: function () {
-                return "/carrots-ajax/a/article/search";
+            //轮播article
+            article_url: function(type) {
+                return "/carrots-ajax/a/article/search?type=" + type
             },
-
-            //二 职位
-            //1 职位信息列表 (最新、推荐，页数，数量)
-            professionList: function () {
-                return "/carrots-ajax/a/profession/search";
+            //找职位分类
+            jobList_url: function() {
+                return "../service/jobList.json"
             },
-
-            //2 职业详情
-            professionDetail: function (id) {
-                return "/carrots-ajax/a/profession/" + id;
+            //公司列表
+            companyList_url: function(type) {
+                return "/carrots-ajax/a/company/search?returnPage=" + type
             },
-
-            //三 公司
-            //1 公司列表
-            companyList: function () {
-                return "/carrots-ajax/a/company/search";
+            //搜索职位
+            searchJob_url: function(type) {
+                return " /carrots-ajax/a/profession/search?recommend=" + type
             },
-            //2 公司详情
-            companyDetail: function (id) {
-                return "/carrots-ajax/a/company/" + id;
+            //职位详情
+            jobDescription_url: function(id) {
+                return "/carrots-ajax/a/profession/" + id
+            },
+            //公司详情
+            companyDescription_url: function(id) {
+                return "/carrots-ajax/a/company/" + id
             }
         }
-
-    }]);
+    });

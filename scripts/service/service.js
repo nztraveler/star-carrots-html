@@ -1,43 +1,29 @@
 angular.module("luoboduoApp")
-	 //一  banner
-	.factory('bannerService', [, '$http','path', function ( $http,path) {
+	.factory('jobService', function($http, path) {
 		return {
-			//1 banner列表
-			articleList: function (params) {
-				return $http.get(path.articleList(), {params: params});
-			}
-		}
-	}])
-	// 二 职业
-	.factory('jobService', ['$http','path', function ( $http,path) {
-		return {
-
-			//1 职位信息列表 (最新、推荐，页数，数量)
-			professionList: function (params) {
-				return $http.get(path.professionList(), {params: params});
+			//轮播article
+			getArticle: function(type) {
+				return $http.get(path.article_url(type))
 			},
-
-			//2 职业详情
-			professionDetail: function (id) {
-				return	$http.get(path.professionDetail())
-			}
-
-		}
-	}])
-	// 三 公司
-	.factory('companyService', ['$q', '$http','path', function ($q, $http,path) {
-		return {
-			//1 公司列表
-			companyList: function (params) {
-				return $http.get(path.companyList(), {params: params});
+			//找职位分类
+			getJobList: function() {
+				return $http.get(path.jobList_url())
 			},
-			//2 公司详情
-			companyDetail: function (id) {
-				return $http.get(path.companyDetail(id))
+			//公司搜索
+			getCompanyList: function(data, type) {
+				return $http.get(path.companyList_url(type || ""), { params: data })
+			},
+			//职位搜索
+			getSearchJob: function(data, type) {
+				return $http.get(path.searchJob_url(type || 0), { params: data })
+			},
+			//职位详情
+			getJobDescription: function(id) {
+				return $http.get(path.jobDescription_url(id))
+			},
+			//公司详情
+			getCompanyDescription: function(id) {
+				return $http.get(path.companyDescription_url(id))
 			}
-
 		}
-	}]);
-
-
-
+	});
