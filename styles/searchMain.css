@@ -1,17 +1,23 @@
+.bg-gray {
+    background-color: #F6F7F8;
+}
+.container{
+	background-color: white;
+}
 /*切换按钮*/
 .toggleSearch{
 	background-color: #F6F7F8;
 	font-size: 0;
 }
 .toggleSearch>button{
-	width: 77px;
+	width: 75px;
 	border:none;
 	outline: none;
 	line-height: 28px;
 	background-color: #F6F7F8;
 	font-size: 16px;
 	text-align: center;
-	color:#9ba8b6;
+	color:#536a82;
 }
 .toggleSearch>button.search-btn{
 	background-color: #EB5255;
@@ -41,20 +47,20 @@ div.search-box{
   text-align-last:justify;
 	color: #2d3e50;
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 14px;
 }
 .mar-12 button,.clear-search,.begin-search{
 	border:none;
 	outline: none;
-	padding: 4px 14px;
-	margin: 0 10px;
+	padding: 0 12px;
+	margin: 0 5px;
+	line-height: 26px;
 	background-color:transparent;
 	font-size: 14px;
 	color: #536a82;
 }
 button.defaultChoice,button.begin-search{
 	background-color: #EB5255;
-	font-size: 16px;
 	color: white;
 }
 .begin-search:active,.clear-search:active{

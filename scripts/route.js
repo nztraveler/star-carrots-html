@@ -24,28 +24,25 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             abstract: true, // true 表明此状态不能被显性激活，只能被子状态隐性激活
             resolve: {
                 loadMyFile: _lazyLoad([
-                    'styles/index.css',
+                    'styles/main.css'
                 ])
             }
         })
+        //主页
         .state("field.homePage", {
             url: "/homePage",
             templateUrl: "views/homePage.html",
-            controller:"homeCtrl",
             resolve: {
                 loadMyFile:_lazyLoad([
-                    'styles/homePage.css',
-                    'scripts/controllers/homePage.js',
-                    'jqcarouse',
+                    'styles/homePage.css'
 
                 ])
             }
         })
+        //找精英
         .state("field.elite", {
             url: "/elite",
             templateUrl: "views/elite.html",
-            controller:"eliteCtrl",
-            controlleAs:"vm",
             resolve: {
                 loadMyFile:_lazyLoad([
                     'scripts/controllers/elite.js',
@@ -53,9 +50,9 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
-
+        //关于
         .state("field.about", {
-            url: "/about?status",
+            url: "/about",
             templateUrl: "views/about.html",
             resolve: {
                 loadMyFile:_lazyLoad([
@@ -86,7 +83,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             resolve: {
                 loadMyFile:_lazyLoad([
                     'scripts/controllers/searchMain.js',
-                    'styles/searchMain.css'
+                    'styles/searchMain.css',
                 ])
             }
         })
@@ -94,27 +91,31 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state("field.searchMain.searchCompany", {
             url: "/searchCompany?name",
             templateUrl: "views/searchCompany.html",
+            // controller:searchCompanyCtrl,
+            // controllerAs:vm,
             resolve: {
                 loadMyFile:_lazyLoad([
-                    // 'scripts/controllers/search.js',
+                    'scripts/controllers/search.js',
                     'styles/searchCompany.css'
                 ])
             }
         })
         //搜索职位
         .state("field.searchMain.searchJob", {
-            url: "/searchJob",
+            url: "/searchJob?type&subType&name",
             templateUrl: "views/searchJob.html",
+            // controller:searchJobCtrl,
+            // controllerAs:vm,
             resolve: {
                 loadMyFile:_lazyLoad([
-                    // 'scripts/controllers/search.js',
+                    'scripts/controllers/search.js',
                     'styles/searchJob.css'
                 ])
             }
         })
         // 职位详情
         .state("field.jobDescription", {
-            url: "/jobDescription?id&companyId&name",
+            url: "/jobDescription?id",
             templateUrl: "views/jobDescription.html",
             controller:"jobDescriptionCtrl",
             controllerAs:"vm",
@@ -127,7 +128,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         })
         //公司详情
         .state("field.companyDescription", {
-            url: "/companyDescription",
+            url: "/companyDescription?id",
             templateUrl: "views/companyDescription.html",
             controller:"companyDescriptionCtrl",
             controllerAs:"vm",
@@ -138,6 +139,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
+
 
 
 

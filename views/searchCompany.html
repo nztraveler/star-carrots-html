@@ -1,77 +1,48 @@
-<div class="col-xs-12 col-sm-6 col-md-4">
-<div class="searchCompany-box" ui-sref="field.companyDescription({})">
-	<div class="searchCompany-card">
-        <div class="img-box">
-            <img src="../images/company-logo.jpg" alt="" class="img-responsive">
-        </div>
-        <div class="company-content">
-            <p class="company-content-text companyName">盈泰财富云</p>
-            <p class="company-content-text word-limit">盈泰财富云，互联网+财富管理，中国三方财富管理行业最佳运营服务商，互联网产品有私募云App和云台系统</p>
-            <p class="company-content-text"><span class="word-red">10</span>个在招职位</p>
-        </div>
+<div class="row search-box">
+    <div class="form-group">
+        <label for="" class="choiceName">关键字:</label>
+        <input type="text" name="" class="keyWord" placeholder="IT修真院" maxlength="24" ng-model="vm.data.name"> 当前关键字：{{vm.data.name}}
     </div>
-    <div class="company-welfare">
-    	<span class="word-limit"><img src="../images/phone-url.png">移动互联网53454</span>
-    	<span class="word-limit"><img src="../images/location-company.png">移动互联网345345</span>
-    	<span class="word-limit"><img src="../images/shangshi.png">移动互联网3552</span>
+    <div class="form-group mar-12">
+        <label for="" class="choiceName">所在地区:</label>
+        <button ng-class="{true:'defaultChoice'}[a.choose]" ng-click="vm.checkboxMulti($index,vm.option.province)" ng-repeat="a in vm.option.province track by $index">{{a.name}}</button>
+    </div>
+    <div class="form-group mar-12">
+        <label for="" class="choiceName">所属行业:</label>
+        <button ng-class="{true:'defaultChoice'}[a.choose]" ng-click="vm.checkboxMulti($index,vm.option.industry)" ng-repeat="a in vm.option.industry track by $index">{{a.name}}</button>
+    </div>
+    <div class="form-group mar-12">
+        <label for="" class="choiceName">融资规模:</label>
+        <button ng-class="{true:'defaultChoice'}[a.choose]" ng-click="vm.checkboxMulti($index,vm.option.financing)" ng-repeat="a in vm.option.financing track by $index">{{a.name}}</button>
+    </div>
+    <div class="search-btn ">
+        <button class="begin-search pull-right" ng-click="vm.search()">搜索</button>
+        <button class="clear-search pull-right" ng-click="vm.clear()">清空</button>
     </div>
 </div>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4">
-    <div class="searchCompany-box" ui-sref="field.companyDescription({})">
+<div class="row view">
+  <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="x in vm.companyList.data track by $index">
+    <div class="searchCompany-box" ui-sref="field.companyDescription({name:x.name,id:x.id,companyId:x.id})">
         <div class="searchCompany-card">
             <div class="img-box">
-                <img src="../images/company-logo.jpg" alt="" class="img-responsive">
+                <img src={{x.logo}} alt="" class="img-responsive">
             </div>
             <div class="company-content">
-                <p class="company-content-text companyName">盈泰财富云</p>
-                <p class="company-content-text word-limit">盈泰财富云，互联网+财富管理，中国三方财富管理行业最佳运营服务商，互联网产品有私募云App和云台系统</p>
-                <p class="company-content-text"><span class="word-red">10</span>个在招职位</p>
+                <p class="company-content-text companyName"> {{x.name}}</p>
+                <p class="company-content-text word-limit">{{x.slogan}}</p>
+                <p class="company-content-text"><span class="word-red">{{x.professionNum}}</span>个在招职位</p>
             </div>
         </div>
-        <div class="company-welfare">
-            <span class="word-limit"><img src="../images/phone-url.png">移动互联网</span>
-            <span class="word-limit"><img src="../images/location-company.png">移动互联网</span>
-            <span class="word-limit"><img src="../images/shangshi.png">移动互联网</span>
+        <div class="company-welfare-item">
+            <span class="word-limit">
+            <img src="../images/phone-url.png">
+            <span ng-repeat="industry in x.industryList track by $index">
+                <span ng-if="!$first">/</span>{{industry|industryFilter}}
+            </span>
+            </span>
+            <span class="word-limit"><img src="../images/location-company.png">{{x.financing|financingFilter}}</span>
+            <span class="word-limit"><img src="../images/shangshi.png">{{x.province|provinceFilter}}</span>
         </div>
     </div>
 </div>
-<div class="col-xs-12 col-sm-6 col-md-4"">
-    <div class="searchCompany-box" ui-sref="field.companyDescription({})">
-        <div class="searchCompany-card">
-            <div class="img-box">
-                <img src="../images/company-logo.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="company-content">
-                <p class="company-content-text companyName">盈泰财富云</p>
-                <p class="company-content-text word-limit">盈泰财富云，互联网+财富管理，中国三方财富管理行业最佳运营服务商，互联网产品有私募云App和云台系统</p>
-                <p class="company-content-text"><span class="word-red">10</span>个在招职位</p>
-            </div>
-        </div>
-        <div class="company-welfare">
-            <span class="word-limit"><img src="../images/phone-url.png">移动互联网</span>
-            <span class="word-limit"><img src="../images/shangshi.png">A轮</span>
-            <span class="word-limit"><img src="../images/location-company.png">北京市</span>
-        </div>
-    </div>
 </div>
-<div class="col-xs-12 col-sm-6 col-md-4">
-    <div class="searchCompany-box" ui-sref="field.companyDescription({})">
-        <div class="searchCompany-card">
-            <div class="img-box">
-                <img src="../images/company-logo.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="company-content">
-                <p class="company-content-text companyName">盈泰财富云</p>
-                <p class="company-content-text word-limit">盈泰财富云，互联网+财富管理，中国三方财富管理行业最佳运营服务商，互联网产品有私募云App和云台系统</p>
-                <p class="company-content-text"><span class="word-red">10</span>个在招职位</p>
-            </div>
-        </div>
-        <div class="company-welfare">
-            <span class="word-limit"><img src="../images/phone-url.png">移动互联网</span>
-            <span class="word-limit"><img src="../images/location-company.png">移动互联网</span>
-            <span class="word-limit"><img src="../images/shangshi.png">移动互联网</span>
-        </div>
-    </div>
-</div>
-

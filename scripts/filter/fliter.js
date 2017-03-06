@@ -1,68 +1,66 @@
-'use strict';
-// 职业主类
-var myApp=angular.module("luoboduoApp",[]);
-myApp.filter('jobTypeFilter', function (jobType) {
-    return function (type) {
-        for (var i = 0; i < jobType.length; i++) {
-            if (type == jobType[i].type) {
-                return jobType[i].name;
+angular.module("luoboduoApp")
+    .filter('jobTypeFilter', function(jobType) {
+        return function(type) {
+            for (var i = 0; i < jobType.length; i++) {
+                if (type == jobType[i].type) {
+                    return jobType[i].name;
+                }
             }
         }
-    }
-});
+    })
 // 职业分类
-myApp.filter('secondTypeFilter', function (secondType) {
-    return function (type) {
+.filter('secondTypeFilter', function(secondType) {
+    return function(type) {
         for (var i = 0; i < secondType.length; i++) {
             if (type == secondType[i].type) {
                 return secondType[i].name;
             }
         }
     }
-});
+})
 // 薪资水平
-myApp.filter('compensationFilter', function (compensationtype) {
-    return function (type) {
+.filter('compensationFilter', function(compensationtype) {
+    return function(type) {
         for (var i = 0; i < compensationtype.length; i++) {
             if (type == compensationtype[i].type) {
                 return compensationtype[i].name;
             }
         }
     }
-});
+})
 //  公司行业 industry
-myApp.filter('industryFilter', function (industrytype) {
-    return function (type) {
+.filter('industryFilter', function(industrytype) {
+    return function(type) {
         for (var i = 0; i < industrytype.length; i++) {
             if (type == industrytype[i].type) {
                 return industrytype[i].name;
             }
         }
     }
-});
+})
 //  工作经验 experience
-myApp.filter('experienceFilter', function (experiencetype) {
-    return function (type) {
+.filter('experienceFilter', function(experiencetype) {
+    return function(type) {
         for (var i = 0; i < experiencetype.length; i++) {
             if (type == experiencetype[i].type) {
                 return experiencetype[i].name;
             }
         }
     }
-});
+})
 //     学历要求 education
-myApp.filter('educationFilter', function (educationtype) {
-    return function (type) {
+.filter('educationFilter', function(educationtype) {
+    return function(type) {
         for (var i = 0; i < educationtype.length; i++) {
             if (type == educationtype[i].type) {
                 return educationtype[i].name;
             }
         }
     }
-});
+})
 //       发布时间 updateAt
-myApp.filter('updateAtFilter', function (updateAttype, $filter) {
-    return function (type) {
+.filter('updateAtFilter', function(updateAttype, $filter) {
+    return function(type) {
         var timestamp = new Date().getTime();
         timestamp = $filter('date')(timestamp, 'yyyyMMdd');
         var time = timestamp - $filter('date')(type, 'yyyyMMdd');
@@ -74,20 +72,20 @@ myApp.filter('updateAtFilter', function (updateAttype, $filter) {
             return $filter('date')(type, 'yyyy-MM-dd HH:mm');
         }
     }
-});
+})
 //    融资规模 financing
-myApp.filter('financingFilter', function (financingtype) {
-    return function (type) {
+.filter('financingFilter', function(financingtype) {
+    return function(type) {
         for (var i = 0; i < financingtype.length; i++) {
             if (type == financingtype[i].type) {
                 return financingtype[i].name;
             }
         }
     }
-});
+})
 //     职位类别 category
-myApp.filter('categoryFilter', function (categorytype) {
-    return function (type) {
+.filter('categoryFilter', function(categorytype) {
+    return function(type) {
         for (var i = 0; i < categorytype.length; i++) {
             if (type == categorytype[i].type) {
                 return categorytype[i].name;

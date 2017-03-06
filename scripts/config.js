@@ -2,7 +2,6 @@
  angular.module("luoboduoApp", ["ui.router", "oc.lazyLoad"])
      .config(httpConfig)
      .config(projectRouteConfig)
-     .config(lazyLoadConfig)
      .run(['$rootScope',
          function ($rootScope) {
              $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
@@ -39,19 +38,4 @@ function httpConfig($httpProvider) {
         return $.param(data);
     };
 }
-
-function lazyLoadConfig($ocLazyLoadProvider) {
-    $ocLazyLoadProvider.config({
-        modules: [
-            {
-                name: 'jqcarouse',
-                files: [
-                    'scripts/directives/jqbootstrap-carouse/jqbootstrap-carouse.css',
-                    'scripts/directives/jqbootstrap-carouse/jqbootstrap-carouse.js'
-                ]
-            },
-        ]
-    });
-}
-
 
