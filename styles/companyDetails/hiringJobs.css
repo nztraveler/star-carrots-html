@@ -1,0 +1,156 @@
+.company-introduce-cont {
+    background-color: #fff;
+    margin-top: 40px;
+    margin-bottom: 20px
+}
+
+.company-homepage, .company-job {
+    padding: 0;
+}
+
+.company-homepage > span {
+    padding: 2px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block
+}
+
+.company-job > span {
+    padding: 2px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block
+}
+
+.company-homepage > span {
+    color: #fc2b47;
+    border-bottom: 3px solid #fc2b47
+}
+
+.company-product-total {
+    color: #536a82;
+    border-left: 5px solid #fc2b47;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.company-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 10px 0
+}
+
+.company-text {
+    margin: 0 auto
+}
+
+.company-history {
+    margin: 1rem 0
+}
+
+.company-location {
+    border: 1px solid #D9D9D9;
+    margin-right: 2rem;
+    margin-left: 0
+}
+
+.job-msg, .job-type {
+    border: 1px solid #E8E8E8
+}
+
+.company-location-image {
+    display: inline-block;
+    padding: 0
+}
+
+.company-location-msg {
+    display: inline-block;
+    padding: 4rem 0 0 1rem
+}
+
+.company-location-img {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block
+}
+
+.company-location-image img, .company-location-img img {
+    width: 100%
+}
+
+.industry > img {
+    display: inline-block
+}
+
+.industry {
+    margin: 30px auto
+}
+
+.job-type > a {
+    margin: 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 3px 10px;
+    color: #536a82;
+}
+
+.job-classify-active {
+    color: #fff !important;
+    background-color: #fc2b47
+}
+
+.job-classify-active:hover {
+    color: #fff;
+}
+
+.job-type-top {
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.job-classify {
+    padding: 15px 10px;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 10px;
+    color: #2d3e50;
+}
+
+.job-msg {
+    margin: 20px auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.job-msg:hover {
+    box-shadow: 0 0 7px #E2E2E2;
+    border: solid 1px #f5f5f5;
+}
+
+.job-msg > div {
+    line-height: 70px;
+
+}
+
+.job-msg-time {
+    color: #999999;
+}
+
+.job-msg-msg {
+    font-weight: 700;
+    margin: 0 0 0 15px;
+    color: #2d3e50;
+    font-size: 16px;
+}
+
+.job-msg-rmb {
+    color: #fc2b47;
+    font-weight: 700;
+    margin: 0 0 0 15px;
+}
+
+.job-pagination {
+    margin-right: 12px;
+}

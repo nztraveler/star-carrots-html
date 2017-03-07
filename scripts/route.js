@@ -21,28 +21,34 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state('field', {
             url: '',
             templateUrl: 'views/main.html',
+            // controller:"mainCtrl",
+            // controllerAs: 'vm',
             abstract: true, // true 表明此状态不能被显性激活，只能被子状态隐性激活
             resolve: {
                 loadMyFile: _lazyLoad([
-                    'styles/main.css'
+                    'styles/index.css',
+                    // 'scripts/controllers/mainCtrl.js',
                 ])
             }
         })
-        //主页
         .state("field.homePage", {
             url: "/homePage",
             templateUrl: "views/homePage.html",
+            controller:"homeCtrl",
             resolve: {
                 loadMyFile:_lazyLoad([
-                    'styles/homePage.css'
+                    'styles/homePage.css',
+                    'scripts/controllers/homePage.js',
+                    'jqcarouse',
 
                 ])
             }
         })
-        //找精英
         .state("field.elite", {
             url: "/elite",
             templateUrl: "views/elite.html",
+            controller:"eliteCtrl",
+            controlleAs:"vm",
             resolve: {
                 loadMyFile:_lazyLoad([
                     'scripts/controllers/elite.js',
@@ -50,9 +56,9 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
-        //关于
+
         .state("field.about", {
-            url: "/about",
+            url: "/about?status",
             templateUrl: "views/about.html",
             resolve: {
                 loadMyFile:_lazyLoad([
@@ -126,16 +132,51 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 ])
             }
         })
-        //公司详情
-        .state("field.companyDescription", {
-            url: "/companyDescription?id",
-            templateUrl: "views/companyDescription.html",
-            controller:"companyDescriptionCtrl",
-            controllerAs:"vm",
+
+        //公共部分
+        .state('field.companyMain', {
+            url: '/companyMain?page&size&id&companyId',
+            title: '在招职位',
+            templateUrl: 'views/companyDetails/companyMain.html',
+            controller: 'companyHomeCtrl',
+            controllerAs: 'vm',
             resolve: {
-                loadMyFile:_lazyLoad([
-                    'scripts/controllers/companyDescription.js',
-                    'styles/companyDescription.css'
+                loadMyFile: _lazyLoad([
+                    'scripts/controllers/companyDetails/companyHomeCtrl.js',
+                    'styles/companyDetails/companyMain.css'
+                ])
+            }
+        })
+
+        //公司页面主页
+        .state('field.companyMain.companyHome', {
+            url: '/companyHome',
+            title: '公司主页',
+            templateUrl: 'views/companyDetails/companyHome.html?page&size',
+            controller: 'companyHomeCtrl',
+            controllerAs: 'vm',
+            resolve: {
+                loadMyFile: _lazyLoad([
+                    'scripts/controllers/companyDetails/companyHomeCtrl.js',
+                    'styles/companyDetails/companyHome.css',
+
+                ])
+            }
+        })
+        //在招职位页面
+        .state('field.companyMain.hiringJobs', {
+            url: '/hiringJobs',
+            title: '在招职位',
+            templateUrl: 'views/companyDetails/hiringJobs.html?page&size',
+            controller: 'hiringJobsCtrl',
+            controllerAs: 'vm',
+            resolve: {
+                loadMyFile: _lazyLoad([
+                    'scripts/controllers/companyDetails/hiringJobsCtrl.js',
+                    'styles/companyDetails/hiringJobs.css',
+                    'styles/companyDetails/companyHome.css',
+                    // 'scripts/directives/fsp-paging/pagination.js',
+                    'notFind',
                 ])
             }
         })

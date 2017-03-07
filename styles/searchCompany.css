@@ -14,7 +14,7 @@
     display: -webkit-flex;
     align-items: center;
     padding: 20px 0 20px 24px;
-    margin:0;
+    margin:
 }
 
 .img-box {
@@ -62,25 +62,26 @@
     color: #FC3652;
 }
 
-.searchCompany-card+.company-welfare-item {
+.searchCompany-card+.company-welfare {
     display: flex;
     display: -webkit-flex;
     background-color: #fafafa;
     padding: 0 10px;
 }
 
-.searchCompany-card+.company-welfare-item>span {
+.searchCompany-card+.company-welfare>span {
     flex: 1;
     -webkit-flex: 1;
     text-align: center;
-    line-height: 20px;
+    line-height: 150%;
     padding: 10px 0;
     color: #999;
 }
-.searchCompany-card+.company-welfare-item>span>img {
-    margin: 0 6px 3px 0;
+
+.searchCompany-card+.company-welfare>span>img {
+    margin: 0 6px 4px 0;
 }
-.searchCompany-card+.company-welfare-item span.word-limit {
+.searchCompany-card+.company-welfare span.word-limit {
     white-space: nowrap;
     width: 100%;
     overflow: hidden;

@@ -1,0 +1,597 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+*, *:focus, *:active, *:focus:active, *:before, *:before:focus, *:before:active, *:before:focus:active, *:after, *:after:focus, *:after:active, *:after:focus:active {
+    outline: none;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none;
+}
+
+
+.caontainer{
+
+}
+
+.newjo
+
+.home-newJob-main .carousel .carousel-control .left{
+    /*opacity: 1;*/
+    /*left: -13px;*/
+    /*background-color: #f7f7f7;*/
+
+}
+
+.carousel-control:hover{
+    opacity: 0.2;
+}
+
+.carousel-control p{
+    margin-top: 70%;
+    color: red;
+
+}
+
+
+h2 {
+    text-align: center;
+}
+h2:not(:first-child) {
+    margin-top: 45px;
+}
+
+/*p {*/
+/*margin: 20px 0 10px;*/
+/*}*/
+p + p {
+    margin-top: 0;
+}
+
+.banner img{
+    background-size: cover;
+    max-width: 100%;
+}
+
+.radish-clear-pd img{
+    background-size: cover;
+    max-width: 100%;
+}
+
+
+
+
+/*introduce*/
+.home-introduce {
+    padding: 74px 0;
+    width: 100%;
+
+}
+
+.introduce-tag {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home-img {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+}
+
+.introduce-tag p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #536a82;
+}
+
+.introduce-tag .home-introduce-font {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2d3e50;
+}
+
+.home-introduce-text {
+    border-left: 1px solid #E5E9EB;
+}
+
+.home-introduce-text > div {
+    margin-top: 30px;
+}
+
+.home-introduce-text > div:first-child {
+    margin-top: 0;
+}
+
+.home-introduce-text > div > p {
+    margin: 0;
+    color: #2d3e50;
+}
+
+@media screen and (max-width: 992px) {
+    .home-introduce-text {
+        border-left: 0;
+    }
+}
+
+.home-introduce-text .introduce-text-font {
+    color: #fc2b47;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*最新职位*/
+.newjob{
+    width: 100%;
+    background:#f7f7f7 ;
+}
+
+.home-newJob-main {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.home-section-title {
+    text-align: center;
+    padding: 80px 0 50px 0;
+    color: #536a82;
+    font-size: 16px;
+
+}
+
+.home-section-font {
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 0;
+    color: #2d3e50;
+    font-weight: bold;
+}
+
+.home-section-line {
+    height: 2px;
+    width: 30px;
+    background-color: #fc2b47;
+    margin: 4px auto;
+}
+
+.home-section-newJob {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.home-newJob-more {
+    list-style: none;
+    text-decoration: none;
+    color: #536a82;
+    font-size: 16px;
+    position: absolute;
+    top: -23px;
+    right: 16px;
+    z-index: 9;
+    margin-bottom: 20px;
+}
+
+
+
+/*二号轮播图*/
+.banner-pre,
+.banner-next {
+    position: absolute;
+    top: 47%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+}
+
+.banner-pre {
+    left: -72%;
+}
+
+.banner-pre .img-responsive:hover {
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.banner-next {
+    right: -72%;
+}
+
+.radish-clear-pd {
+    padding: 0;
+    cursor: pointer;
+}
+
+.radish-clear-pd > img {
+
+    max-width: 100%;
+    background-size: cover ;
+
+    /*border-bottom: 1px solid #E5E9EB;*/
+    /*padding: 4rem 1rem;*/
+}
+
+.clear-pd > div:last-child {
+    padding-right: 0;
+}
+
+.position-carousel-inner {
+
+}
+
+.home-listbox {
+    background-color: #ffffff;
+    border-radius: 5px;
+
+}
+
+.home-listbox .font-box {
+    width: 100%;
+    padding: 10px 10px;
+    border-top: 1px solid rgb(238, 238, 238)
+}
+
+.home-title {
+    width: 100%;
+}
+
+.home-listbox:hover {
+    -moz-box-shadow: 0 4px 7px #e7e7e7;
+    -webkit-box-shadow: 0 4px 7px #e7e7e7;
+    box-shadow:0px 5px 15px  #e7e7e7;
+}
+
+@media screen and (min-width: 992px){
+    .home-listbox{
+        width: 240px;
+        height: 262px;
+        margin:0 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .home-listbox > .middle-img-box {
+        width: 100%;
+        height: 188px;
+        margin: 0 auto;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .home-listbox > .middle-img-box {
+        width: 100%;
+        height: 152px;
+        margin: 0 auto;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .home-listbox{
+        width: 100%;
+        height: auto;
+        margin: 10px auto;
+    }
+}
+
+.home-listbox > .middle-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.home-newJob-name {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    color: #2d3e50;
+}
+
+
+
+.home-listbox-line {
+    height: 1px;
+    width: 20px;
+    margin: 2px auto 5px auto;
+    background-color: #fc2b47;
+}
+
+.home-newJob-company {
+    font-size: 14px;
+    color: #536a82;
+}
+
+.carousel-controls {
+    height: 1px;
+}
+
+/*最新职位轮播图控制*/
+.newjob-carousel-left, .newjob-carousel-right {
+    width: 3%;
+}
+
+.newjob-carousel-left {
+    left: -36px;
+    top: 80px;
+}
+
+.right.carousel-control.newjob-carousel-right {
+    right: -36px;
+    top: 80px;
+}
+
+@media screen and (max-width: 992px) {
+    .newjob-carousel-left, .newjob-carousel-right {
+        display: none;
+    }
+
+    .friend-carousel-hide {
+        display: none;
+    }
+}
+
+.home-service-main {
+    margin-bottom: 30px;
+
+}
+
+.home-step {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #E9EDEF;
+    padding: 0;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.home-service-img {
+    -moz-border-radius: 2px 2px 0 0;
+    -webkit-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0;
+    margin: 0 auto;
+}
+
+.home-service-text {
+    display: inline-block;
+    margin: 15px 0;
+    font-size: 16px;
+    color: #2d3e50;
+}
+
+.home-service-arrow {
+    height: 1px;
+    border: 1px dashed;
+    border-image: url(../images/border-img.png) 10;
+    margin-top: 75px;
+    position: relative;
+}
+
+.home-service-arrow img {
+    position: absolute;
+    bottom: -13px;
+    left: 45%;
+}
+
+/*小于992px 隐藏小灰机*/
+@media screen and (max-width: 991px) {
+    .home-service-arrow {
+        display: none;
+    }
+
+    .home-service-arrow > img {
+        display: none;
+    }
+
+    .home-step {
+        border: none;
+    }
+
+    .home-listbox > .middle-img-box img {
+        width: auto;
+    }
+}
+
+/*伙伴之言*/
+.home-comment {
+    padding-bottom: 75px;
+}
+
+.home-friend {
+    color: #999999;
+    background-color: rgb(255, 255, 255);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #F0F0F0;
+    padding: 30px 17px 0 17px;
+    margin: 2px 0;
+    min-height: 338px;
+}
+
+.home-friend:hover {
+    -moz-box-shadow: 1px 0 20px #DAE0E3;
+    -webkit-box-shadow: 1px 0 20px #DAE0E3;
+    box-shadow: 1px 0 20px #DAE0E3;
+}
+
+.home-friend-name {
+    color: #294154;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.home-friend-introduce {
+    color: #666666;
+    font-size: 14px;
+    margin: 10px 0 20px 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+*, *:focus, *:active, *:focus:active, *:before, *:before:focus, *:before:active, *:before:focus:active, *:after, *:after:focus, *:after:active, *:after:focus:active {
+    outline: none;
+}
+
+.jqcarouse-style ul {
+    padding: 0;
+}
+
+.jqcarouse-style li {
+    list-style: none;
+    padding: 0;
+}
+
+.jqcarouse-style h2 {
+    text-align: center;
+}
+
+.jqcarouse-style h2:not(:first-child) {
+    margin-top: 45px;
+}
+
+.jqcarouse-style p {
+    margin: 20px 0 10px;
+}
+
+.jqcarouse-style p + p {
+    margin-top: 0;
+}
+
+.jqcarouse-style .container {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.jqcarouse-style .carousel {
+    margin: 0 30px;
+    /*width: calc(100% - ($button-spacing * 2));*/
+}
+
+.jqcarouse-style .carousel[data-shift="1"] .carousel-inner > .item {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.jqcarouse-style .carousel .carousel-inner > .item.row {
+    margin: 0;
+}
+
+.jqcarouse-style .carousel .carousel-control {
+    background: none;
+    color: transparent;
+    overflow: hidden;
+    text-shadow: none;
+    /*-webkit-transition: all .3s ease-in-out;*/
+    /*transition: all .3s ease-in-out;*/
+    width: 30px;
+}
+
+.jqcarouse-style .carousel .carousel-control:before {
+    color: #444;
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 40px;
+}
+
+/*.jqcarouse-style .carousel .carousel-control:after {*/
+/*border-radius: 50%;*/
+/*box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);*/
+/*content: '';*/
+/*height: 60%;*/
+/*position: absolute;*/
+/*top: 50%;*/
+/*-webkit-transform: translateY(-50%);*/
+/*transform: translateY(-50%);*/
+/*-webkit-transition: all .3s ease-in-out;*/
+/*transition: all .3s ease-in-out;*/
+/*width: 100%;*/
+/*}*/
+
+/*.jqcarouse-style .carousel .carousel-control:hover:after {*/
+/*box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.7);*/
+/*}*/
+
+.jqcarouse-style .carousel .carousel-control.left {
+    opacity: 1;
+    left: -13px;
+    background-color: #f7f7f7;
+    width: 60px;
+    text-align: left;
+}
+
+.jqcarouse-style .carousel .carousel-control.left span img {
+    opacity: 0.5;
+}
+
+.jqcarouse-style .carousel .carousel-control.left:hover span img {
+    opacity: 1;
+}
+
+/*.jqcarouse-style .carousel .carousel-control.left:before {*/
+/*content: '\e079';*/
+/*}*/
+
+.jqcarouse-style .carousel .carousel-control.left:after {
+    right: -100%;
+}
+
+.jqcarouse-style .carousel .carousel-control.right {
+    opacity: 1;
+    right: -13px;
+    background-color: #f7f7f7;
+    width: 60px;
+    text-align: right;
+}
+
+.jqcarouse-style .carousel .carousel-control.right span img {
+    opacity: 0.5;
+}
+
+.jqcarouse-style .carousel .carousel-control.right:hover span img {
+    opacity: 0.9;
+}
+
+/*.jqcarouse-style .carousel .carousel-control.right:before {*/
+/*content: '\e080';*/
+/*}*/
+
+.jqcarouse-style ul.item > div.clear-padding {
+    padding: 0 10px;
+}
+
+.jqcarouse-style ul.item > div.clear-padding:first-child {
+    /*padding: 0;*/
+}
+
+.home-friend > img {
+    border: solid 1px #ececec;
+}
+
+.friend-carousel-inner {
+    width: 93%;
+    margin: 0 auto;
+}
+
+.friend-banner-pre {
+    left: 0;
+}
+
+.friend-banner-next {
+    right: 0;
+}
+
+

@@ -1,0 +1,23 @@
+<main>
+    <div class="container">
+        <div class="row company-nav">
+            <div class="middle-img-box company-logos">
+                <span></span>
+                <img ng-src="{{vm.data.company.logo}}" alt=""
+                     class="img-responsive">
+            </div>
+            <div class="company-message text-left word-length-limit">
+                <span class="company-main-name">{{vm.data.company.name}}</span>
+                <span class="company-authentication" ng-if="vm.data.company.approved">
+                    <img src="../../../images/company-home-2.png" class="img-responsive company-home-1">
+                    萝卜多认证
+                </span>
+                <div class="company-banner company-font-color word-length-limit">
+                    {{vm.data.company.slogan}}
+                </div>
+                <p class="company-font-color word-length-limit">{{vm.data.productList[0].name}}</p>
+            </div>
+        </div>
+    </div>
+    <div ui-view=""></div>
+</main>

@@ -1,0 +1,85 @@
+<div class="container">
+
+    <div class="row company-introduce-cont">
+        <div class="container ">
+            <div class="company-change">
+                <div class="row company-title-box">
+            <span class="text-center company-homepage" ui-sref="field.companyMain.companyHome">
+            <span>公司详情</span>
+            </span>
+                    <span class="text-center company-job" ui-sref="field.companyMain.hiringJobs">
+            <span>在招职位</span>
+            </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-xs-12 text-left company-msg">
+            <div class="company-msg-pale">
+                <!--产品标题-->
+                <div class="company-title" ng-if="vm.data.productList[0].name">
+                    <span class="company-product-text">公司产品</span>
+                </div>
+                <!--产品介绍-->
+                <div ng-if="vm.data.productList[0].name">
+                    <div class="middle-img-box company-product-logo" ng-if="vm.data.productList[0].logo">
+                        <span></span>
+                        <img ng-src="{{vm.data.productList[0].logo}}" alt=""
+                             class="img-responsive">
+                    </div>
+                    <div class="company-product-banner ">
+                        <p class="company-name word-length-limit ">{{vm.data.productList[0].name}}</p>
+                        <p class="font-536a82 word-length-limit-2">{{vm.data.productList[0].summary}}</p>
+                        <p class="font-536a82 word-length-limit">{{vm.data.productList[0].slogan}}</p>
+                    </div>
+                </div>
+                <!--公司介绍-->
+                <div class="company-introduce">
+                    <span class="company-product-text">公司介绍</span>
+                </div>
+                <!--公司历史-->
+                <div>
+                    <div class="company-text font-536a82">
+                        <pre class="edit-area-text font-14">{{vm.data.company.summary}}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-xs-12 text-left company-sidebar">
+            <!--公司信息-->
+            <div class="company-rightside-title">
+                <span class="company-right-title">公司信息</span>
+                <span class="sidebar-split-line"></span>
+            </div>
+            <!--公司规模-->
+            <div class="scale font-536a82 ">
+                <div class="industry">
+                    <img src="../../../images/people.png" class="img-responsive">
+                    <span>{{vm.data.company.totalNum}}人</span>
+                </div>
+                <div class="industry">
+                    <img src="../../../images/company-home-3.png" class="img-responsive">
+                    <span class="companyhome-industry">
+                        <span ng-repeat="industry in vm.data.industryList track by $index">
+                        <span ng-if="!$first">/</span> {{industry.industry|industryFilter}}</span>
+                    </span>
+                </div>
+                <div class="industry">
+                    <img src="../../../images/location.png" class="img-responsive">
+                    <span>{{vm.data.company.province|provinceFilter}}</span>
+                </div>
+            </div>
+            <!--公司标签-->
+            <div class="company-rightside-title">
+                <span class="company-right-title">公司标签</span>
+                <span class="sidebar-split-line"></span>
+            </div>
+            <!--公司标签-->
+            <div class="welfare-move company-tags ">
+                <div class="welfare company-detail-tag" ng-repeat="tag in vm.data.tagList track by $index ">
+                    <p class="scale-text">{{tag.tag}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

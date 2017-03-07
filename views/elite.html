@@ -170,7 +170,7 @@
                     <div class="row">
                         <div class="elite-success-logo col-lg-3  col-sm-6"
                              ng-repeat="item in findElite">
-                            <div class="success-logo-box" >
+                            <div class="success-logo-box" ui-sref="field.companyMain.companyHome({id:item.id})">
                                 <span></span>
                                 <img src={{item.logo}} class="img-rounded"
                                      >
@@ -178,7 +178,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="elite-moreCompany"
+                <button class="elite-moreCompany" 
                         >
                     更多合作公司
                 </button>

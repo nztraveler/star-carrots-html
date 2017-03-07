@@ -1,0 +1,131 @@
+main {
+    background-color: #f6f7f8
+}
+
+.company-logos, .company-message {
+    background-color: #fff;
+    height: 200px
+}
+
+.company-font-color {
+    color: #415B75
+}
+
+.company-nav {
+    display: flex
+}
+
+.company-logos {
+    width: 200px;
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /* Firefox */
+    -webkit-box-sizing: border-box; /* Safari */
+}
+
+.company-message {
+    flex: 1;
+    padding: 48px 30px
+}
+
+.company-authentication {
+    font-size: 12px;
+    background-color: #fc2b47;
+    border-radius: 10px;
+    color: #fff;
+    padding: 2px 5px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-left: 10px;
+}
+
+.company-banner {
+    margin: 20px 0 20px 0;
+}
+
+.company-home-1 {
+    display: inline-block
+}
+
+.company-main-name {
+    color: #2d3e50;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.company-change {
+    height: 50px;
+}
+
+.company-breadcrumb {
+    background-color: #F2F2F2;
+    margin: 0
+}
+
+.company-breadcrumb > li {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem
+}
+
+.company-breadcrumb-active {
+    color: #FC2A48
+}
+
+.company-title-box {
+    height: 50px;
+    line-height: 44px;
+    margin: 0
+}
+
+.company-title {
+
+    margin: 20px 0 15px 0;
+    line-height: 18px;
+}
+
+.company-sidebar {
+    margin-top: -46px;
+    padding: 24px 36px;
+}
+
+.company-rightside-title {
+    margin-top: 12px;
+}
+
+.company-introduce {
+    border-left: 5px solid #fc2b47;
+    margin: 25px 0 30px 0;
+    line-height: 18px;
+}
+
+.company-msg-pale {
+    overflow: hidden;
+    border-top: 1px solid #e8e8e8;
+}
+
+.sidebar-split-line, .split-line {
+    display: inline-block;
+    margin-bottom: .4rem;
+    height: 1px;
+    width: 85%;
+    background-color: #E8E8E8
+}
+
+@media screen and (min-width: 992px) {
+    .sidebar-split-line {
+        width: 60%;
+    }
+
+    .company-msg {
+        border-right: 3px solid #f4f4f4;
+        margin-bottom: 40px;
+        min-height: 450px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .company-msg {
+        border-right: none;
+    }
+}

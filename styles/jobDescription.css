@@ -1,6 +1,3 @@
-.bg-gray{
-    background-color: #F6F7F8;
-}
 .jobDescription-wrap{
     overflow: hidden;
     padding: 40px 16px 0 18px;
@@ -10,7 +7,7 @@
 .jobDescription-msg{
     border-right:4px solid #f4f4f4;
 }
-.jobDescription-wrap span,img{
+span,img{
     display: inline-block;
     vertical-align: middle;
 }
@@ -58,14 +55,14 @@
     text-align: center;
     font-size: 12px;
 }
-.jobDescription-detail-box{
+.jobDescription-detail{
     padding-bottom: 40px;
     border-bottom:1px solid #f6f7f8;
     line-height:24px;
     color:#536A82;
     font-size:14px;
 }
-.jobDescription-detail-box>h4{
+.jobDescription-detail>h4{
     margin-top:24px;
     margin-bottom:10px;
     padding-left:10px;
@@ -74,15 +71,8 @@
     color:black;
     font-size:16px;
 }
-.jobDescription-detail-box .descriptionDetail{
+.jobDescription-detail>ul{
     padding-bottom: 24px;
-    background-color: white;
-    border: none;
-    color:#536A82;
-    font-size:14px;
-    font-family: "Microsoft Yahei";
-    white-space: pre-wrap;
-    word-wrap: break-word;
 }
 .company-msg>img{
     margin: 0 auto;
@@ -96,13 +86,11 @@
     margin:0 2px 5px 0;
 }
 .base-msg{
-    padding-left: 14%;
     margin-bottom:18px;
     font-size: 16px;
     color:#728497;
 }
 .industry{
-    padding-left: 25%;
     margin:30px 0;
 }
 .sidebar-split-line{
@@ -118,16 +106,11 @@
     outline: none;
     width: 132px;
     height:40px;
-    margin: 25px 0;
+    margin-top: 25px;
     border-radius:4px;
     background-color: #fc2b47;
     color:white;
     text-align: center;
-}
-@media screen and (max-width:767px){
-    .company-msg{
-        margin-top:24px;
-    }
 }
 
 

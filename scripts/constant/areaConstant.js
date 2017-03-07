@@ -1,7 +1,8 @@
 'use strict';
+angular.module('luoboduoApp')
 // 将获取到的省市区ID过滤成文字
-var app=angular.module("luoboduoApp");
-    app.filter('provinceFilter', function (PROVINCE) {
+
+    .filter('provinceFilter', function (PROVINCE) {
         return function (id) {
             if (id != undefined && id != '') {
 
@@ -16,9 +17,9 @@ var app=angular.module("luoboduoApp");
                 return name;
             }
         }
-    });
+    })
 
-app.filter('cityFilter', function (CITY) {
+.filter('cityFilter', function (CITY) {
         return function (id) {
             if (id != undefined && id != '') {
                 var name;
@@ -32,9 +33,9 @@ app.filter('cityFilter', function (CITY) {
                 return name;
             }
         }
-    });
+    })
 
-    app.filter('countyFilter', function (COUNTY) {
+    .filter('countyFilter', function (COUNTY) {
         return function (id) {
             if (id != undefined && id != '') {
 
@@ -50,10 +51,10 @@ app.filter('cityFilter', function (CITY) {
 
             }
         }
-    });
+    })
 // 省/市
 
-    app.constant('PROVINCE', [
+    .constant('PROVINCE', [
         {"ProID": 1, "ProName": "北京市", "ProSort": 1, "ProRemark": "直辖市"},
         {"ProID": 2, "ProName": "天津市", "ProSort": 2, "ProRemark": "直辖市"},
         {"ProID": 3, "ProName": "河北省", "ProSort": 5, "ProRemark": "省份"}, {
@@ -139,7 +140,7 @@ app.filter('cityFilter', function (CITY) {
         }]);
 // 市
 
-    app.constant('CITY', [
+    luoboduoApp.constant('CITY', [
         {"CityID": 1, "CityName": "北京市", "ProID": 1, "CitySort": 1},
         {
             "CityID": 2,
@@ -1068,7 +1069,7 @@ app.filter('cityFilter', function (CITY) {
             "CitySort": 371
         }]);
 //  县/区
-app.constant('COUNTY', [
+luoboduoApp.constant('COUNTY', [
         {"Id": 1, "countyName": "东城区", "CityID": 1, "DisSort": null}, {
             "Id": 2,
             "countyName": "西城区",

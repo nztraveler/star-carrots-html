@@ -50,9 +50,9 @@
 .company-introuduce-text {
     flex: 1;
 }
-.company-introduce .companyType>span{
+.company-introduce>.companyType>span{
     display: inline-block;
-    padding: 0 4px;
+    padding: 0 18px;
     border-left: 1px solid #d9d9d9;
     color: #536a82;
     font-size: 12px;
@@ -79,7 +79,7 @@
 .word-red{
 	font-size: 16px;
 	font-weight: 700;
-	color: #FC3652;
+	color: 
 }
 @media screen and (max-width: 767px){
 	.searchJob-card{

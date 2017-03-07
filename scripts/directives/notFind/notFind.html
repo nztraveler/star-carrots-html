@@ -1,0 +1,101 @@
+<div class="a404">
+    <div class="width-100">
+        <div class="width-100" style="overflow: hidden">
+            <div class="col-md-12 a404-cont">
+                <div class="col-sm-5">
+                    <img src="images/404.png" class="img-responsive notfind-img-sm">
+                </div>
+                <div class="col-sm-7 a404-text notfind-text-sm">
+                    <div class="a404-text1">暂时没有符合该搜索条件的内容</div>
+                    <div class="a404-text2">请重新修改搜索条件后再次进行搜索</div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <!--公司-->
+                <div ng-if="showrecommend==='company'" class="width-100 searchRecomendChoice">
+                    <span class="notFindLine"></span>
+                    <div class="row">
+                        <div class="earchCompanyList-title col-xs-12">推荐公司</div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 company-card"
+                             ng-repeat="x in eliteCompany.data track by $index">
+                            <div class="col-xs-12 company-main img-thumbnail"
+                                 ui-sref="app.companyMain.companyHome({id:x.id})"
+                                 ng-class="{navChoice: $state.includes('app.company.home')}">
+                                <div class="company-content">
+                                    <div class="middle-img-box ">
+                                        <span></span>
+                                        <img src="{{x.logo}}" alt=""
+                                             class="img-responsive">
+                                    </div>
+                                    <div class="companybox-content">
+                                        <p class="word-length-limit companyName mg-top-6">
+                                            {{x.name}}
+                                        </p>
+                                        <p class="word-length-limit company-slogan">
+                                            {{x.slogan}}
+                                        </p>
+                                        <p class="company-jobNumBox">
+                                            <span class="word-length-limit company-jobNum">{{x.professionNum}}</span>个在招职位
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="companyList-welfare bg-fa">
+                                <span class="word-length-limit"><img src="../../images/phone-url.png">
+                                    <span ng-repeat="industry in x.industryList track by $index">
+                                        <span ng-if="!$first">/</span>{{industry|industryFilter}}
+                                    </span>
+                                </span>
+                                    <span><img src="../../images/shangshi.png">{{x.financing|financingFilter}}</span>
+                                    <span class="word-length-limit"><img src="../../images/location-company.png">{{x.province|provinceFilter}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="notFindLine"></span>
+                </div>
+                <!--职位-->
+                <div ng-if="showrecommend==='position'" class="width-100 searchRecomendChoice">
+                    <span class="notFindLine"></span>
+                    <div class="row">
+                        <div class="earchCompanyList-title col-xs-12">推荐职位</div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 company-card"
+                             ng-repeat="x in elitePosition.data track by $index">
+                            <div class="col-xs-12 company-main img-thumbnail"
+                                 ui-sref="app.jobDescription({id:x.id})"
+                                 ng-class="{navChoice: $state.includes('app.company.home')}">
+                                <div class="company-content ">
+                                    <div class="middle-img-box ">
+                                        <span></span>
+                                        <img src="{{x.logo}}" alt=""
+                                             class="img-responsive">
+                                    </div>
+                                    <div class="companybox-content mg-top-10">
+                                        <p class="word-length-limit findJob-payroll mg-top-6">
+                                            {{x.compensation|compensationFilter}}
+                                        </p>
+                                        <p class="word-length-limit findJob-position">
+                                            {{x.name}}
+                                        </p>
+                                        <p class="word-length-limit findJob-companyName">
+                                            <span>{{x.companyName}}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!--<div class="companyList-welfare bg-fa">-->
+                                <!--<span class="word-length-limit"><img src="../../images/phone-url.png">-->
+                                <!--<span ng-repeat="industry in x.industryList track by $index">-->
+                                <!--<span ng-if="!$first">/</span>{{industry|industryFilter}}-->
+                                <!--</span>-->
+                                <!--</span>-->
+                                <!--<span><img src="../../images/shangshi.png">{{x.financing|financingFilter}}</span>-->
+                                <!--<span class="word-length-limit"><img src="../../images/location.png">{{x.province|provinceFilter}}</span>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <span class="notFindLine"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
