@@ -37,21 +37,21 @@
                                     data-toggle="{{vm.isToggle}}"
                                     data-target="#bs-example-navbar-collapse-1"
                                     class="nav navbar-nav navbar-right nav-media main-nav mg-0">
-                                    <li class="nav-page" ui-sref="field.homePage" ng-class="{navChoice: $state.includes('field.homePage')}"
+                                    <li class="nav-page" ui-sref="field.homePage" ng-class="{navChoice: currentState.includes('field.homePage')}"
                                         >首页
                                         <span class="nav-page-underline"></span>
                                     </li>
-                                    <li class="nav-page" ui-sref="field.findJob" ng-class="{navChoice: $state.includes('field.findJob')||$state.includes('field.jobList')
-                                        ||$state.includes('field.searchMain')||$state.includes('field.companyMain')||
-                                        $state.includes('field.jobDescription')||$state.includes('field.notFind')}||$state.includes('field.companyMain.companyHome')">
+                                    <li class="nav-page" ui-sref="field.findJob" ng-class="{navChoice: currentState.includes('field.findJob')||currentState.includes('field.jobList')
+                                        ||currentState.includes('field.searchMain')||currentState.includes('field.companyMain')||
+                                        currentState.includes('field.jobDescription')||currentState.includes('field.notFind')}||currentState.includes('field.companyMain.companyHome')">
                                         找职位<span class="nav-page-underline"></span>
                                     </li>
                                     <li class="nav-page" ui-sref="field.elite"
-                                        ng-class="{navChoice: $state.includes('field.elite')||$state.includes('field.companyList')}">
+                                        ng-class="{navChoice: currentState.includes('field.elite')||currentState.includes('field.companyList')}">
                                         找精英<span class="nav-page-underline"></span>
                                     </li>
                                     <li class="nav-page mg-right-0" ui-sref="field.about"
-                                        ng-class="{navChoice: $state.includes('field.about')}">关于我们
+                                        ng-class="{navChoice: currentState.includes('field.about')}">关于我们
                                         <span class="nav-page-underline"></span>
                                     </li>
                                 </ul>
