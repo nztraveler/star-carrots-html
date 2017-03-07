@@ -292,6 +292,7 @@
 
 .recommend-company-wrap {
     padding: 34px 0 38px 0;
+    overflow: hidden;
 }
 
 .findjob-recommend-box {
@@ -300,8 +301,11 @@
 
 .redomend-company-text {
     position: absolute;
-    bottom: 0;
-    padding: 0 10px;
+    width: 320px;
+    bottom: 10px;
+    left: 35px;
+    /*bottom: 0;*/
+    /*padding: 0 10px;*/
 }
 .redomend-company-text p.word-limit {
     white-space: nowrap;
@@ -510,4 +514,37 @@
     .search-boxtop > form {
         width: 86%;
     }
+}
+
+.padding-lr-15px{
+    padding-left:15px ;
+    padding-right:15px ;
+}
+
+
+.findJob-recommend-logo {
+    width: 21%;
+    height: 100px;
+    display: inline-block;
+    margin: 0 0 10px 3%;
+    font-size: 0;
+    /*padding: 26px 4px;*/
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+}
+
+.findJob-recommend-logo:hover {
+    cursor: pointer;
+}
+
+.findJob-recommend-logo img {
+    height: 100px;
+    /*margin: 0 auto;*/
+}
+
+.findJob-recommend-img {
+    width: 375px;
+    height: 215px;
+    display: block;
+    cursor: pointer;
 }

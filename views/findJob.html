@@ -108,49 +108,43 @@
         </div>
         <!-- 推荐公司 -->
         <div class="row title">
-            <div class="col-xs-6 title-active"><span>推荐公司</span></div>
-            <div class="col-xs-6 text-right"><span class="showMore" ui-sref="field.searchMain.searchCompany">查看更多&gt</span></div>
+            <div class="bg-grey ">
+                <a href="#" class="font-bold padding-lr-15px">推荐公司</a>
+                <a href="#" ui-sref="field.searchMain.searchCompany"
+                   ng-class="{navChoice: $state.includes('field.search.searchCompany')}"
+                   class=" text-right more-hover pull-right padding-lr-15px">查看更多&nbsp;>
+                    <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+                </a>
+            </div>
         </div>
-        <div class="row recommend-company-wrap">
-            <div class="col-xs-12 col-md-4 recomend-company-box" ui-sref="app.companyMain.companyHome({id:vm.industryImg.id})">
-                <img src={{vm.industryImg||"../images/industryImg.jpg"}} alt="" class="img-responsive pointer" ui-sref="field.companyDescription">
-                <div class="redomend-company-text">
-                    <p class="color-white">{{vm.industryImg.name||"北京快校科技有限公司"}}</p>
-                    <p class="color-white word-limit">{{vm.industryImg.slogan||"fast school，互联网国际小学"}}</p>
-                    <div class="redomend-company-item">
-                        <span class="word-limit"><img src="../images/phone-url.png">{{(vm.industryImg.industryId|industryFilter)||"移动互联网"}}</span>
-                        <span class="word-limit"><img src="../images/shangshi.png">{{(vm.industryImg.financing|financingFilter)||"A轮"}}</span>
-                        <span class="word-limit"><img src="../images/location-company.png">{{(vm.industryImg.province|provinceFilter)||"北京市"}}</span>
+        <div class="row">
+            <div class="recommend-company-wrap">
+                <div class="col-sm-4 col-xs-12 "
+                     ui-sref="app.companyMain.companyHome({id:vm.industryImg.id})"
+                     ng-class="{navChoice: $state.includes('app.company.home')}">
+                    <img src="{{vm.industryImg.industryImg}}" class="pointer findJob-recommend-img " ui-sref="field.companyDescription">
+                    <div class="redomend-company-text">
+                        <p class="color-white word-length-limit">{{vm.industryImg.name}}</p>
+                        <p class="color-white word-limit">{{vm.industryImg.slogan}}</p>
+                        <div class="redomend-company-item word-length-limit">
+                            <span class="word-length-limit"><img src="images/phone-url-white.png">{{vm.industryImg.industryId|industryFilter}}</span>
+                            <span class="word-length-limit"><img src="images/shangshi-white.png">{{vm.industryImg.financing|financingFilter}}</span>
+                            <span class="word-length-limit"><img src="images/location-white.png">{{vm.industryImg.province|provinceFilter}}</span>
+                        </div>
                     </div>
                 </div>
+                <div class="col-sm-8 col-xs-12 ">
+                    <div ng-class="{navChoice: $state.includes('app.companyMain.companyHome')}"
+                         class="middle-img-box findJob-recommend-logo"
+                         ng-repeat="x in vm.normalCompanyList track by $index">
+                        <span></span>
+                        <img src={{x.logo}} alt=""
+                             class="img-responsive"
+                             ui-sref="app.companyMain.companyHome({id:x.id})">
+                    </div>
+                </div>
+                <upcarousel></upcarousel>
             </div>
-            <!-- 竖向轮播 -->
-            <upcarousel></upcarousel>
-            <!--  <div class="col-xs-12">
-                 <div class="hot-company-box" ui-sref="field.companyDescription">
-                     <div class="company-introduce">
-                         <div class="img-box">
-                             <img src="../images/company-logo.jpg" class="img-responsive">
-                         </div>
-                         <div class="company-text">
-                             <p class="company-name">康辉集团北京胜佳科技有限公司</p>
-                             <p class="searchJob">暂无</p>
-                             <p class="company-tag">
-                                 <span>移动互联网</span>
-                                 <span>企业服务</span>
-                             </p>
-                         </div>
-                     </div>
-                     <div class="job-introduce">
-                         <p class="searching">正在热招</p>
-                         <p class="occupation_item">
-                             <span>前端工程师</span>
-                             <span>产品经理</span>
-                             <span>产品总监</span>
-                         </p>
-                     </div>
-                 </div>
-             </div> -->
         </div>
         <!-- 简介 -->
         <div class="row findjob-introduce-wrap">

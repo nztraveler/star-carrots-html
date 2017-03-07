@@ -1,7 +1,7 @@
 
 'use strict';
-var luoboduoApp =angular.module('luoboduoApp',[]);
-luoboduoApp.controller('hiringJobsCtrl', ['$scope', '$rootScope', '$state', 'jobService','commonUtil','searchOptions', 'searchUtil',
+angular.module("luoboduoApp")
+.controller('hiringJobsCtrl', ['$scope', '$rootScope', '$state', 'jobService','commonUtil','searchOptions', 'searchUtil',
     function ($scope, $rootScope, $state, jobService,commonUtil,searchOptions, searchUtil) {
     console.log('hiring');
         var vm = this;

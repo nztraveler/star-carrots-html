@@ -1,0 +1,56 @@
+<div class="col-xs-12 findjob-myCarousel">
+    <div id="myCarousel" class="carousel slide row">
+        <!-- 轮播（Carousel）项目 -->
+        <div class="col-md-11 myCarousel-box col-sm-12 ">
+            <div class="carousel-inner carousel-innergai">
+                <div class="item findjob-carousel" ng-class="{'active':$first}"
+                     ng-repeat="find in vm.approvedCompanyList">
+                    <div class="row" ui-sref="app.companyMain.companyHome({id:find.id})">
+                        <div class="col-md-7 findjob-carousel-left">
+                            <div class="col-xs-4 img-thumbnail findjob-carousel-img">
+                                <span></span>
+                                <img src={{find.logo}} class="img-responsive">
+                            </div>
+                            <div class="col-xs-7 findjob-carousel-list">
+                                <p class="findjob-carousel-text1 word-length-limit pd-0">{{find.name}}</p>
+                                <p class="findjob-carousel-text2 word-length-limit">{{find.slogan}}</p>
+                                <p class="findjob-carousel-text3 word-length-limit">
+                                    <span ng-repeat="findtag in find.industryList| limitTo:3">{{findtag|industryFilter}}</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 updown-carousel-right">
+                            <p class="findjob-carousel-text1 mg-left-15">正在热招</p>
+                            <p>        &nbsp;</p>
+                            <div class="word-length-limit">
+                                <span class="findjob-carousel-text1box word-length-limit"
+                                      ng-repeat="profession in find.professionList track by $index">
+                                {{profession}}
+                            </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 轮播（Carousel）指标 -->
+        <div class="col-sm-1 carousel-indicatorsgai-box mg-top-10">
+            <ol class="carousel-indicators carousel-indicatorsgai ">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a ng-non-bindable class="carousel-control carousel-controlgai left" href="#myCarousel"
+           data-slide="prev prevgai">
+        </a>
+        <a ng-non-bindable class="carousel-control carousel-controlgai right" href="#myCarousel"
+           data-slide="next nextgai">
+        </a>
+    </div>
+</div>
+
+

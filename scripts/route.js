@@ -78,7 +78,9 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             resolve: {
                 loadMyFile:_lazyLoad([
                     'scripts/controllers/findJob.js',
-                    'styles/findJob.css'
+                    'styles/findJob.css',
+                    'scripts/directives/upDownCarousel/upDownCarousel.css',
+                    'scripts/directives/upDownCarousel/upDownCarousel.js'
                 ])
             }
         })

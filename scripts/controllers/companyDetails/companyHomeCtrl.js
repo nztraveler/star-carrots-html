@@ -1,6 +1,6 @@
 'use strict';
-var luoboduoApp =angular.module('luoboduoApp',[]);
-luoboduoApp.controller('companyHomeCtrl', ['$scope', '$rootScope', '$state', 'jobService', 'commonUtil',
+angular.module("luoboduoApp")
+.controller('companyHomeCtrl', ['$scope', '$rootScope', '$state', 'jobService', 'commonUtil',
     function ($scope, $rootScope, $state, jobService,commonUtil) {
         console.log('companyHomeCtrl');
         var vm = this;
