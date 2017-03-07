@@ -1,43 +1,22 @@
-<div class="bg-gray">
+<!--顶部边栏-->
+<div class="search-top">
     <div class="container">
-        <div class="row toggleSearch">
-            <button ng-class="{'search-btn':$state.includes('field.searchMain.searchCompany')}" ui-sref="field.searchMain.searchCompany">公司</button>
-            <button ng-class="{'search-btn':$state.includes('field.searchMain.searchJob')}" ui-sref="field.searchMain.searchJob">职业</button>
-        </div>
-        <div>
-            <div ui-view=""></div>
-            <div class="row notFind-wrap" ng-if="vm.isNotFind">
-            <!-- 未找到公司 -->
-                <div ng-if="$state.includes('field.searchMain.searchCompany')">
-                    <div class="notFind-box">
-                        <div class="notFind_img-box">
-                            <img src="../images/notFind.png" alt="">
-                        </div>
-                        <div class="notFind-info">
-                            <p class="search-result">暂时没有符合该搜索条件的公司</p>
-                            <p class="search-again">请重新修改搜索条件后再次进行搜索</p>
-                        </div>
-                    </div>
-                    <div class="recommend-box">
-                        <p class="recommend-text">推荐公司</p>
-                    </div>
-                </div>
-                <!-- 未找到职业 -->
-                <div ng-if="$state.includes('field.searchMain.searchJob')">
-                    <div class="notFind-box">
-                        <div class="notFind_img-box">
-                            <img src="../images/notFind.png" alt="">
-                        </div>
-                        <div class="notFind-info">
-                            <p class="search-result">暂时没有符合该搜索条件的职位</p>
-                            <p class="search-again">请重新修改搜索条件后再次进行搜索</p>
-                        </div>
-                    </div>
-                    <div class="recommend-box">
-                        <p class="recommend-text">推荐职业</p>
-                    </div>
-                </div>
+        <div class="row tag-bottom">
+            <div class="search-title search-title-company search-titles"
+                 ui-sref="app.searchMain.searchCompany"
+                 ng-class="{searchTitleChoice:$state.includes('app.searchMain.searchCompany')}">
+                公司
+            </div>
+            <div class="search-title search-title-job" ui-sref="app.searchMain.searchJob"
+                 ng-class="{searchTitleChoice:$state.includes('app.searchMain.searchJob')}">
+                职业
             </div>
         </div>
+    </div>
+
+    <!--主题内容-->
+    <div ui-view="">
+
+
     </div>
 </div>

@@ -137,10 +137,10 @@ angular.module('luoboduoApp')
             "ProName": "香港特别行政区",
             "ProSort": 34,
             "ProRemark": "特别行政区"
-        }]);
+        }])
 // 市
 
-    luoboduoApp.constant('CITY', [
+    .constant('CITY', [
         {"CityID": 1, "CityName": "北京市", "ProID": 1, "CitySort": 1},
         {
             "CityID": 2,
@@ -1067,9 +1067,9 @@ angular.module('luoboduoApp')
             "CityName": "香港特别行政区",
             "ProID": 34,
             "CitySort": 371
-        }]);
+        }])
 //  县/区
-luoboduoApp.constant('COUNTY', [
+.constant('COUNTY', [
         {"Id": 1, "countyName": "东城区", "CityID": 1, "DisSort": null}, {
             "Id": 2,
             "countyName": "西城区",

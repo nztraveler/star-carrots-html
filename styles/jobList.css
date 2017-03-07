@@ -1,0 +1,15 @@
+
+.middle-img-box img {
+    width: 98%;
+}
+
+.now-title {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 0 0 5px 20px;
+    background-color: #F6F7F8;
+    margin-bottom: 0;
+}
+

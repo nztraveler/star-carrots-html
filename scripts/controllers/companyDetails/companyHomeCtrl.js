@@ -1,10 +1,12 @@
+'use strict';
 var luoboduoApp =angular.module('luoboduoApp',[]);
-luoboduoApp.controller('companyHomeCtrl', ['$scope', '$rootScope', '$state', 'jobService',
-    function ($scope, $rootScope, $state, jobService) {
+luoboduoApp.controller('companyHomeCtrl', ['$scope', '$rootScope', '$state', 'jobService', 'commonUtil',
+    function ($scope, $rootScope, $state, jobService,commonUtil) {
+        console.log('companyHomeCtrl');
         var vm = this;
         vm.id = $state.params.id;
         //跳转到本页面保持顶部
-        // .scrollTo(0, 0);
+        commonUtil.scrollTo(0, 0);
         //公司详情
 
         jobService.getCompanyDescription(vm.id).then(function (res) {

@@ -1,48 +1,86 @@
-<div class="row search-box">
-    <div class="form-group">
-        <label for="" class="choiceName">关键字:</label>
-        <input type="text" name="" class="keyWord" placeholder="IT修真院" maxlength="24" ng-model="vm.data.name"> 当前关键字：{{vm.data.name}}
-    </div>
-    <div class="form-group mar-12">
-        <label for="" class="choiceName">所在地区:</label>
-        <button ng-class="{true:'defaultChoice'}[a.choose]" ng-click="vm.checkboxMulti($index,vm.option.province)" ng-repeat="a in vm.option.province track by $index">{{a.name}}</button>
-    </div>
-    <div class="form-group mar-12">
-        <label for="" class="choiceName">所属行业:</label>
-        <button ng-class="{true:'defaultChoice'}[a.choose]" ng-click="vm.checkboxMulti($index,vm.option.industry)" ng-repeat="a in vm.option.industry track by $index">{{a.name}}</button>
-    </div>
-    <div class="form-group mar-12">
-        <label for="" class="choiceName">融资规模:</label>
-        <button ng-class="{true:'defaultChoice'}[a.choose]" ng-click="vm.checkboxMulti($index,vm.option.financing)" ng-repeat="a in vm.option.financing track by $index">{{a.name}}</button>
-    </div>
-    <div class="search-btn ">
-        <button class="begin-search pull-right" ng-click="vm.search()">搜索</button>
-        <button class="clear-search pull-right" ng-click="vm.clear()">清空</button>
-    </div>
-</div>
-<div class="row view">
-  <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="x in vm.companyList.data track by $index">
-    <div class="searchCompany-box" ui-sref="field.companyDescription({name:x.name,id:x.id,companyId:x.id})">
-        <div class="searchCompany-card">
-            <div class="img-box">
-                <img src={{x.logo}} alt="" class="img-responsive">
-            </div>
-            <div class="company-content">
-                <p class="company-content-text companyName"> {{x.name}}</p>
-                <p class="company-content-text word-limit">{{x.slogan}}</p>
-                <p class="company-content-text"><span class="word-red">{{x.professionNum}}</span>个在招职位</p>
+<div class="container">
+
+    <div class="row">
+        <!--条件筛选面板-->
+        <div class="screen-panel search-panel">
+            <form class="form-horizontal mg-left-right-20" novalidate name="searchParams">
+                <div class="form-group">
+                    <label>关 键 字 ：</label>
+                    <input name=name type="text" maxlength="39" class="form-control keyword-search mg-left-5"
+                           placeholder="IT修真院" ng-maxlength="38" ng-model="vm.data.name">
+                    <span ng-if="searchParams.name.$dirty" class="search-remind-word">当前关键字：{{vm.data.name}}</span>
+                    <span ng-if="searchParams.name.$invalid">验证失败 请不要超过38个字符</span>
+                </div>
+                <div class="form-group">
+                    <label class="choice-name">所在地区：</label>
+                    <a ng-class="{true:'defaultChoice'}[a.choose]"
+                       ng-click="vm.checkboxMulti($index,vm.option.province)"
+                       ng-repeat="a in vm.option.province track by $index">{{a.name}}</a>
+                </div>
+                <div class="form-group">
+                    <label class="choice-name">所属行业：</label>
+                    <a ng-class="{true:'defaultChoice'}[a.choose]"
+                       ng-click="vm.checkboxMulti($index,vm.option.industry)"
+                       ng-repeat="a in vm.option.industry track by $index">{{a.name}}</a>
+                </div>
+                <div class="form-group">
+                    <label class="choice-name">融资规模：</label>
+                    <a ng-class="{true:'defaultChoice'}[a.choose]"
+                       ng-click="vm.checkboxMulti($index,vm.option.financing)"
+                       ng-repeat="a in vm.option.financing track by $index">{{a.name}}</a>
+                </div>
+            </form>
+            <div class="search-btn ">
+                <button class="begin-search pull-right" ng-click="vm.search()">搜索</button>
+                <button class="clear-search pull-right" ng-click="vm.clear()">清空</button>
             </div>
         </div>
-        <div class="company-welfare-item">
-            <span class="word-limit">
-            <img src="../images/phone-url.png">
-            <span ng-repeat="industry in x.industryList track by $index">
-                <span ng-if="!$first">/</span>{{industry|industryFilter}}
-            </span>
-            </span>
-            <span class="word-limit"><img src="../images/location-company.png">{{x.financing|financingFilter}}</span>
-            <span class="word-limit"><img src="../images/shangshi.png">{{x.province|provinceFilter}}</span>
+        <!--公司列表展示-->
+        <div class="company-listBox pd-bottom-30">
+            <div class="row  company-list ">
+                <div class="col-md-4 col-sm-6 col-xs-12 company-card"
+                     ng-repeat="x in vm.companyList.data track by $index">
+                    <div class="col-xs-12 company-main img-thumbnail"
+                         ui-sref="app.companyMain.companyHome({name:x.name,id:x.id,companyId:x.id})"
+                         ng-class="{navChoice: $state.includes('app.company.home')}">
+                        <div class="company-content">
+                            <div class="middle-img-box ">
+                                <span></span>
+                                <img src={{x.logo}} alt=""
+                                     class="img-responsive">
+                            </div>
+                            <div class="companybox-content">
+                                <p class=" word-length-limit companyName">
+                                    {{x.name}}
+                                </p>
+                                <p class="word-length-limit company-slogan">
+                                    {{x.slogan}}
+                                </p>
+                                <p class="company-jobNumBox">
+                                    <span class="company-jobNum">{{x.professionNum}}</span>个在招职位
+                                </p>
+                            </div>
+                        </div>
+                        <div class="companyList-welfare bg-fa">
+                            <span class="word-length-limit"><img src="../../images/phone-url.png">
+                                <span ng-repeat="industry in x.industryList track by $index">
+                                    <span ng-if="!$first">/</span>{{industry|industryFilter}}
+                                </span>
+                            </span>
+                            <span><img src="../../images/shangshi.png">{{x.financing|financingFilter}}</span>
+                            <span class="word-length-limit"><img src="../../images/location-company.png">{{x.province|provinceFilter}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 pd-bottom-30 mg-top-20">
+                    <pagination ng-if="vm.companyList.total" total="{{vm.companyList.total}}"></pagination>
+                </div>
+            </div>
+            <!--notFind页面-->
+            <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="3"></not-find>
         </div>
     </div>
 </div>
-</div>
+
+
+
