@@ -1,72 +1,72 @@
 <div class="bg-gray">
-  <div class="container">
-    <div class="row jobDescription-wrap">
-    <div class="col-xs-12 col-sm-8 jobDescription-msg">
-        <div class="jobDescription-introduce">
-            <h4>{{vm.jobDescription.data.name}}</h4>
-            <p class="jobDescription-text1">{{vm.jobDescription.data.companyName}}</p>
-            <p class="jobDescription-keywords">
-                <span class="jobDescription-text2">{{vm.jobDescription.data.compensation|compensationFilter}}</span>&emsp;
-                <span><img src="../images/location-jobdescripe.png">{{vm.jobDescription.data.province|provinceFilter}}</span>&emsp;
-                <span><img src="../images/description-2.png">{{vm.jobDescription.data.education|educationFilter}}</span>&emsp;
-                <span><img src="../images/description-1.png">{{vm.jobDescription.data.experience|experienceFilter}}</span>
-            </p>
-            <p class="company-welfare">
-                <span ng-repeat="tage in vm.jobDescription.data.tags track by $index">{{tage.tag}}</span>
-            </p>
-            <p class="jobDescription-text3">
-                <img src="../images/date.png" alt=""> 发布时间：{{vm.jobDescription.data.updateAt|date:"yyyy-MM-dd HH:mm"}}</p>
-        </div>
-        <!--公司详情-->
-        <div class="jobDescription-detail-box">
-            <h4>职位描述</h4>
-            <p>岗位职责</p>
-            <p>
-                <pre class="descriptionDetail">{{vm.jobDescription.data.responsibility}}</pre>
-            </p>
-            <p>必要条件</p>
-            <p>
-                <pre class="descriptionDetail">{{vm.jobDescription.data.requisite}}</pre>
-            </p>
-            <p>公司福利</p>
-            <p>
-                <pre class="descriptionDetail">{{vm.jobDescription.data.boon}}</pre>
-            </p>
-        </div>
-    </div>
-    <!--公司基本信息-->
-    <div class="col-xs-12 col-sm-4 company-msg">
-        <img src="{{vm.jobDescription.data.logo}}" alt="" class="img-responsive">
-        <h4 class="text-center"><a ui-sref="field.companyDescription({id:vm.jobDescription.data.companyId})">{{vm.jobDescription.data.companyName}}
-        <img src="../images/company-home-1.png" alt=""></a></h4>
-        <p class="base-msg">基本信息<span class="sidebar-split-line"></span></p>
-        <p class="industry"><img src="../images/people.png">&emsp;{{vm.jobDescription.data.totalNum}}人</p>
-        <p class="industry">
-        <img src="../images/company-home-3.png">&emsp;
-        <span ng-repeat="tota in vm.jobDescription.data.industryList track by $index"><span ng-if="!$first">/</span> {{tota.industry|industryFilter}}</span></p>
-    </div>
-    <!--分享-->
-   <!--  <div class="col-xs-6 job-share-box">
-        <img class="dis-none" src="../images/sharing.png" alt="">
-        <span class="dis-none">分享</span>
-        <div class="sharebuttonbox">
-            <a class="s_weixin" data-toggle="collapse" data-target="#code-box" ng-click="vm.share('weixin')"></a>
-            <a class="s_sqq" ng-click="vm.share('sqq')"></a>
-            <a class="s_tsina" ng-click="vm.share('tsina')"></a>
-        </div>
-        <div class="code-box collapse" id="code-box">
-            <span class="code-box-close" data-toggle="collapse" data-target="#code-box">&times;</span>
-            <div class="code-box-header">分享到微信朋友圈</div>
-            <img src="http://pan.baidu.com/share/qrcode?w=150&h=150&url={{vm.url}}" alt="">
-            <div class="code-box-footer">
-                打开微信，点击底部的“发现”， 使用“扫一扫”即可将网页分享至朋友圈。
+    <div class="container">
+        <div class="row jobDescription-wrap">
+            <div class="col-xs-12 col-sm-8 jobDescription-msg">
+                <div class="jobDescription-introduce">
+                    <h4>{{vm.jobDescription.data.name}}</h4>
+                    <p class="jobDescription-text1">{{vm.jobDescription.data.companyName}}</p>
+                    <p class="jobDescription-keywords">
+                        <span class="jobDescription-text2">{{vm.jobDescription.data.compensation|compensationFilter}}</span>&emsp;
+                        <span><img src="../images/location-jobdescripe.png">{{vm.jobDescription.data.province|provinceFilter}}</span>&emsp;
+                        <span><img src="../images/description-2.png">{{vm.jobDescription.data.education|educationFilter}}</span>&emsp;
+                        <span><img src="../images/description-1.png">{{vm.jobDescription.data.experience|experienceFilter}}</span>
+                    </p>
+                    <p class="company-welfare">
+                        <span ng-repeat="tage in vm.jobDescription.data.tags track by $index">{{tage.tag}}</span>
+                    </p>
+                    <p class="jobDescription-text3">
+                        <img src="../images/date.png" alt=""> 发布时间：{{vm.jobDescription.data.updateAt|date:"yyyy-MM-dd HH:mm"}}</p>
+                </div>
+                <!--公司详情-->
+                <div class="jobDescription-detail-box">
+                    <h4>职位描述</h4>
+                    <p>岗位职责</p>
+                    <p>
+                    <pre class="descriptionDetail">{{vm.jobDescription.data.responsibility}}</pre>
+                    </p>
+                    <p>必要条件</p>
+                    <p>
+                    <pre class="descriptionDetail">{{vm.jobDescription.data.requisite}}</pre>
+                    </p>
+                    <p>公司福利</p>
+                    <p>
+                    <pre class="descriptionDetail">{{vm.jobDescription.data.boon}}</pre>
+                    </p>
+                </div>
+            </div>
+            <!--公司基本信息-->
+            <div class="col-xs-12 col-sm-4 company-msg">
+                <img src="{{vm.jobDescription.data.logo}}" alt="" class="img-responsive">
+                <h4 class="text-center"><a ui-sref="field.companyMain.companyHome({id:vm.jobDescription.data.companyId})">{{vm.jobDescription.data.companyName}}
+                    <img src="../images/company-home-1.png" alt=""></a></h4>
+                <p class="base-msg">基本信息<span class="sidebar-split-line"></span></p>
+                <p class="industry"><img src="../images/people.png">&emsp;{{vm.jobDescription.data.totalNum}}人</p>
+                <p class="industry">
+                    <img src="../images/company-home-3.png">&emsp;
+                    <span ng-repeat="tota in vm.jobDescription.data.industryList track by $index"><span ng-if="!$first">/</span> {{tota.industry|industryFilter}}</span></p>
+            </div>
+            <!--分享-->
+            <!--  <div class="col-xs-6 job-share-box">
+                 <img class="dis-none" src="../images/sharing.png" alt="">
+                 <span class="dis-none">分享</span>
+                 <div class="sharebuttonbox">
+                     <a class="s_weixin" data-toggle="collapse" data-target="#code-box" ng-click="vm.share('weixin')"></a>
+                     <a class="s_sqq" ng-click="vm.share('sqq')"></a>
+                     <a class="s_tsina" ng-click="vm.share('tsina')"></a>
+                 </div>
+                 <div class="code-box collapse" id="code-box">
+                     <span class="code-box-close" data-toggle="collapse" data-target="#code-box">&times;</span>
+                     <div class="code-box-header">分享到微信朋友圈</div>
+                     <img src="http://pan.baidu.com/share/qrcode?w=150&h=150&url={{vm.url}}" alt="">
+                     <div class="code-box-footer">
+                         打开微信，点击底部的“发现”， 使用“扫一扫”即可将网页分享至朋友圈。
+                     </div>
+                 </div>
+             </div> -->
+            <div class="col-xs-8 text-right interesting">
+                <button>我感兴趣</button>
             </div>
         </div>
-    </div> -->
-    <div class="col-xs-8 text-right interesting">
-        <button>我感兴趣</button>
     </div>
-</div>
-</div>
 
 </div>

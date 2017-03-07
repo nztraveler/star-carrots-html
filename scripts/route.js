@@ -93,7 +93,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             resolve: {
                 loadMyFile: _lazyLoad([
                     //'js/controllers/findJob/searchMainCtrl.js',
-                    'styles/findJob/searchMain.css'
+                    'styles/searchMain.css'
                 ])
             }
         })

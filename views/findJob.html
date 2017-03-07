@@ -33,8 +33,35 @@
                     </div>
                 </form>
                 <!-- 轮播图 -->
-                
-                <img src="../images/job_carousel_img-1.png" class="img-responsive">
+                <div class="findJob-top-carousel">
+                    <div id="findJob-top-carousel" class="carousel slide findJob-top-carousel" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner findJob-top-carousel" role="listbox">
+                            <div class="item"
+                                 ng-repeat="findJobArticle in vm.findJobArticle.data.articleList track by $index"
+                                 ng-class="{'active':$first}">
+                                <img src={{findJobArticle.img}} alt="" href={{findJobArticle.url}}>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control carousel-butten" href="#findJob-top-carousel" role="button"
+                           data-slide="prev"
+                           onclick="return false">
+                            <span aria-hidden="true"><img src="../images/pre-2.png" alt=""></span>
+                        </a>
+                        <a class="right carousel-control carousel-butten" href="#findJob-top-carousel" role="button"
+                           data-slide="next"
+                           onclick="return false">
+                            <span aria-hidden="true"><img src="../images/next-2.png" alt=""></span>
+                        </a>
+                        <!-- 轮播（Carousel）指标 -->
+                        <ol class="carousel-indicators">
+                            <li class="mg-left-right-10" data-target="#findJob-top-carousel" data-slide-to={{$index}}
+                                ng-repeat="homeArticle in vm.findJobArticle.data.articleList track by $index"
+                                ng-class="{'active':$first}"></li>
+                        </ol>
+                    </div>
+                </div>
             </div>
         </div>
         <!--推荐职位、最新职位-->
@@ -43,7 +70,7 @@
                 <span ng-class="{'title-active':!vm.isChoose}" ng-click="exchangeJob(!vm.isChoose)">推荐职位</span>&nbsp;
                 <span ng-class="{'title-active':vm.isChoose}" ng-click="exchangeJob(vm.isChoose)">最新职位</span>
             </div>
-            <div class="col-xs-6 text-right"><span class="showMore" ui-sref="field.jobList({n:vm.isChoose||false})">查看更多&gt</span></div>
+            <div class="col-xs-6 text-right"><span class="showMore" ui-sref="field.jobList">查看更多&gt</span></div>
         </div>
         <!-- 推荐职位 -->
         <div class="new_job_wrap row" ng-if="!vm.isChoose">
@@ -86,43 +113,44 @@
         </div>
         <div class="row recommend-company-wrap">
             <div class="col-xs-12 col-md-4 recomend-company-box" ui-sref="app.companyMain.companyHome({id:vm.industryImg.id})">
-                <img src="{{vm.industryImg.industryImg}}" alt="" class="img-responsive pointer" ui-sref="field.companyDescription">
+                <img src={{vm.industryImg||"../images/industryImg.jpg"}} alt="" class="img-responsive pointer" ui-sref="field.companyDescription">
                 <div class="redomend-company-text">
-                    <p class="color-white">{{vm.industryImg.name}}</p>
-                    <p class="color-white word-limit">{{vm.industryImg.slogan}}</p>
+                    <p class="color-white">{{vm.industryImg.name||"北京快校科技有限公司"}}</p>
+                    <p class="color-white word-limit">{{vm.industryImg.slogan||"fast school，互联网国际小学"}}</p>
                     <div class="redomend-company-item">
-                        <span class="word-limit"><img src="../images/phone-url.png">{{vm.industryImg.industryId|industryFilter}}</span>
-                        <span class="word-limit"><img src="../images/shangshi.png">{{vm.industryImg.financing|financingFilter}}</span>
-                        <span class="word-limit"><img src="../images/location-company.png">{{vm.industryImg.province|provinceFilter}}</span>
+                        <span class="word-limit"><img src="../images/phone-url.png">{{(vm.industryImg.industryId|industryFilter)||"移动互联网"}}</span>
+                        <span class="word-limit"><img src="../images/shangshi.png">{{(vm.industryImg.financing|financingFilter)||"A轮"}}</span>
+                        <span class="word-limit"><img src="../images/location-company.png">{{(vm.industryImg.province|provinceFilter)||"北京市"}}</span>
                     </div>
                 </div>
             </div>
-            <!-- 轮播 -->
-            <div class="col-xs-12">
-                <div class="hot-company-box" ui-sref="field.companyDescription">
-                    <div class="company-introduce">
-                        <div class="img-box">
-                            <img src="../images/company-logo.jpg" class="img-responsive">
-                        </div>
-                        <div class="company-text">
-                            <p class="company-name">康辉集团北京胜佳科技有限公司</p>
-                            <p class="searchJob">暂无</p>
-                            <p class="company-tag">
-                                <span>移动互联网</span>
-                                <span>企业服务</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="job-introduce">
-                        <p class="searching">正在热招</p>
-                        <p class="occupation">
-                            <span>前端工程师</span>
-                            <span>产品经理</span>
-                            <span>产品总监</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <!-- 竖向轮播 -->
+            <upcarousel></upcarousel>
+            <!--  <div class="col-xs-12">
+                 <div class="hot-company-box" ui-sref="field.companyDescription">
+                     <div class="company-introduce">
+                         <div class="img-box">
+                             <img src="../images/company-logo.jpg" class="img-responsive">
+                         </div>
+                         <div class="company-text">
+                             <p class="company-name">康辉集团北京胜佳科技有限公司</p>
+                             <p class="searchJob">暂无</p>
+                             <p class="company-tag">
+                                 <span>移动互联网</span>
+                                 <span>企业服务</span>
+                             </p>
+                         </div>
+                     </div>
+                     <div class="job-introduce">
+                         <p class="searching">正在热招</p>
+                         <p class="occupation_item">
+                             <span>前端工程师</span>
+                             <span>产品经理</span>
+                             <span>产品总监</span>
+                         </p>
+                     </div>
+                 </div>
+             </div> -->
         </div>
         <!-- 简介 -->
         <div class="row findjob-introduce-wrap">

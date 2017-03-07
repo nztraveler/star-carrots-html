@@ -1,8 +1,8 @@
 angular.module("luoboduoApp",[])
 .controller("searchMainCtrl",['$scope', '$rootScope', '$state', 'jobService', 'searchOptions', 'searchUtil', 'commonUtil',function ($scope, $rootScope, $state, jobService, searchOptions, searchUtil, commonUtil){
-	   vm=this;
+	   var vm=this;
 	   //切换按钮
-	   $rootScope.$state = $state;
+        $rootScope.$state = $state;
      // 读取本地记录
         vm.option = commonUtil.judegesessionStorage(sessionStorage.searchCompanyOptions, searchOptions);
         // 获取选中的值

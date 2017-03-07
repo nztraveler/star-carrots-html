@@ -1,29 +1,24 @@
-.search-top {
-    background-color: #F6F7F8
+.bg-gray{
+    background-color: #F6F7F8;
 }
-
-.tag-bottom {
-    border-bottom: 2px solid #EB5255
+.bg-white{
+    background-color: white;
 }
-
-.search-title {
-    display: inline-block;
-    padding: 3px 20px;
-    border-bottom: 0;
-    cursor: pointer;
-    font-size: 2rem
+.toggleSearch{
+    background-color: #F6F7F8;
+    font-size: 0;
 }
-
-.search-title-company {
-    border-right: 0
+.toggleSearch>button{
+    width: 75px;
+    border:none;
+    outline: none;
+    line-height: 28px;
+    background-color: #F6F7F8;
+    font-size: 16px;
+    text-align: center;
+    color:#536a82;
 }
-
-.search-title-job {
-    margin-left: -.5%
-}
-
-.searchTitleChoice {
+.toggleSearch>button.search-btn{
     background-color: #EB5255;
-    color: #fff
+    color:white;
 }
-

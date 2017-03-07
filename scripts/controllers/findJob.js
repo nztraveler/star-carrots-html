@@ -10,28 +10,37 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
                 console.log(vm.list);
             }
         });
+        //轮播图  左右的
+        jobService.getArticle(1).then(function (res) {
+            if (res.data.code == 0) {
+                vm.findJobArticle = res.data;
+                //轮播图开始3s
+                carouselConfig(3000);
+            }
+        });
         //获取最新职位数据
         jobService.getSearchJob(vm.params).then(function(res){
                 if(res.data.code==0){
                     vm.newJobList = res.data;
                     console.log(res.data);
                 }
-             }
-            );
+            }
+        );
         // 获取推荐职位数据
-       jobService.getSearchJob(vm.params,1).then(function (res) {
+        jobService.getSearchJob(vm.params,1).then(function (res) {
             if (res.data.code == 0) {
                 vm.recommendJobList = res.data;
                 console.log(res.data);
             }
 
         });
-       //最新职位、推荐职位切换
+        //最新职位、推荐职位切换
         $scope.exchangeJob=function(isChoose){
             if(isChoose==undefined||isChoose==false){
                 vm.isChoose=!vm.isChoose;
             }
         }
+        //  优质公司
         jobService.getCompanyList("", 1).then(function (res) {
             if (res.data.code == 0) {
                 vm.PreeminentCompany = res.data;
@@ -41,8 +50,8 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
                 vm.approvedCompanyList = vm.PreeminentCompany.approvedCompanyList;
                 //推荐公司轮播图开始3s
                 // carouselConfig(3000);
-
                 vm.industryImg = vm.PreeminentCompany.industryImg;
+                console.log("good");
             }
         });
     }]);
