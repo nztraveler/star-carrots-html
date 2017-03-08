@@ -12,4 +12,8 @@
     background-color: #F6F7F8;
     margin-bottom: 0;
 }
+.search-content .right-company-box{
+    display: flex;
+    align-items: center;
+}
 
