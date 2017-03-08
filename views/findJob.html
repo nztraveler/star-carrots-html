@@ -120,9 +120,8 @@
         <div class="row">
             <div class="recommend-company-wrap">
                 <div class="col-md-4 col-xs-12 "
-                     ui-sref="field.companyMain.companyHome({id:vm.industryImg.id})"
                      ng-class="{navChoice: $state.includes('field.company.home')}">
-                    <img src="{{vm.industryImg.industryImg}}" class="pointer findJob-recommend-img " ui-sref="field.companyDescription({id:vm.industryImg.id})">
+                    <img src="{{vm.industryImg.industryImg}}" class="pointer findJob-recommend-img " ui-sref="field.companyMain.companyHome({id:vm.industryImg.id})">
                     <div class="recommend-company-text">
                         <p class="color-white word-length-limit">{{vm.industryImg.name}}</p>
                         <p class="color-white word-limit">{{vm.industryImg.slogan}}</p>
@@ -133,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 col-xs-12">
+                <div class="col-lg-8 col-xs-12 findJob-recommend-logoBox">
                     <div ng-class="{navChoice: $state.includes('field.companyMain.companyHome')}"
                          class="middle-img-box findJob-recommend-logo"
                          ng-repeat="x in vm.normalCompanyList track by $index">
