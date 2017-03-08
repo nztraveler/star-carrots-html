@@ -59,12 +59,12 @@
             <!--列表-->
             <div class="search-content pd-bottom-30">
                 <div class="search-oneRow" ng-repeat="item in vm.jobList.data track by $index">
-                    <div class="row img-thumbnail search-rowBox" ui-sref="app.jobDescription({id:item.id})">
+                    <div class="row img-thumbnail search-rowBox" ui-sref="field.jobDescription({id:item.id})">
                         <!--左边的工作信息-->
                         <div class="col-md-6 col-xs-12 search-roxLift">
                             <div class="pd-10">
                                 <div class="left-jobName">
-                                    <p class="mg-0" ui-sref="app.jobDescription({id:item.id})">{{item.name}}</p>
+                                    <p class="mg-0" ui-sref="field.jobDescription({id:item.id})">{{item.name}}</p>
                                 </div>
                                 <div class="left-time">发布时间：{{item.updateAt|updateAtFilter}}</div>
                                 <div class="left-payroll"> {{item.compensation|compensationFilter}}</div>
