@@ -42,7 +42,7 @@ luoboduoApp.controller('homeCtrl',['$scope','$state', '$http','$stateParams','$r
                 $scope.SearchJobList=bannerArr;
 
                 $('.carousel').carousel({
-                    interval: 2000
+                    interval: 3000
                 })
             });
 

@@ -45,7 +45,10 @@ angular.module("luoboduoApp")
             if (res.data.code == 0) {
                 vm.jobList = res.data;
                 console.log(vm.jobList.total)
+            }else {
+                console.warn("在招职位信息读取失败")
             }
+
             // 判断找不到页面或找不到内容
             vm.isNotFind = commonUtil.judgeNotFind(res.data);
             // 找不到内容时，是否推荐

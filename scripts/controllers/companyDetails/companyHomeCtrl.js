@@ -14,7 +14,8 @@ angular.module("luoboduoApp")
                 vm.data = res.data.data;
             }
             else {
-                console.warn("公司详情的 公司信息读取失败")
+                vm.str =res.data;
+                console.warn("公司详情的 公司信息读取失败");
             }
         });
     }]);
