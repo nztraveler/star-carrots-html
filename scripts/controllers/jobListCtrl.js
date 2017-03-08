@@ -45,7 +45,7 @@ luoboduoApp.controller('jobListCtrl', ['$scope', '$rootScope', '$state', 'jobSer
             if (res.data.code === 0) {
                 vm.jobList = res.data;
             }else{
-                console.warn("职位搜索的数据信息读取失败");
+                alert("职位搜索的数据信息读取失败");
             }
 
             // 判断找不到页面或找不到内容

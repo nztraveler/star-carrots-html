@@ -24,7 +24,7 @@ angular.module("luoboduoApp")
                 // vm.url = "http://carrots.ptteng.com/sharing-page/sharing-page.html?id=" + vm.jobDescription.id;
                 console.log(vm.jobDescription);
             } else{
-                console.warn("职位详情的数据信息读取失败");
+                alert("职位详情的数据信息读取失败");
             }
         }
     );

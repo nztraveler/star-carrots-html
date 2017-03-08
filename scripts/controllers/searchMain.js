@@ -39,7 +39,7 @@ angular.module("luoboduoApp",[])
             if (res.data.code == 0) {
                 vm.companyList = res.data;
             }else{
-                console.warn("公司搜索的数据信息读取失败");
+                alert("公司搜索的数据信息读取失败");
             }
             // 判断找不到页面或找不到内容
             vm.isNotFind = commonUtil.judgeNotFind(res.data);
@@ -52,7 +52,7 @@ angular.module("luoboduoApp",[])
                     vm.searchJob = res.data;
                     vm.total = res.data.total;
                 }else{
-                    console.warn("职位搜索的数据信息读取失败");
+                    alert("职位搜索的数据信息读取失败");
                 }
                 // 判断找不到页面或找不到内容
                 vm.isNotFind = commonUtil.judgeNotFind(res.data);

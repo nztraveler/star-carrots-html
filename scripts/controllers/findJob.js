@@ -10,7 +10,7 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
                 vm.list=res.data.data;
                 console.log(vm.list);
             }else{
-                console.warn("职业分类的数据信息读取失败");
+                alert("职业分类的数据信息读取失败");
             }
         });
         //轮播图  左右的
@@ -20,7 +20,7 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
                 //轮播图开始3s
                 carouselConfig(3000);
             }else{
-                console.warn("找职位左右轮播图获取失败");
+                alert("找职位左右轮播图获取失败");
             }
         });
         //获取最新职位数据
@@ -29,7 +29,7 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
                     vm.newJobList = res.data;
                     console.log(res.data);
                 }else{
-                    console.warn("最新职位的数据信息读取失败");
+                    alert("最新职位的数据信息读取失败");
                 }
             }
         );
@@ -39,7 +39,7 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
                 vm.recommendJobList = res.data;
                 console.log(res.data);
             }else{
-                console.warn("推荐职位的数据信息读取失败");
+                alert("推荐职位的数据信息读取失败");
             }
 
         });
@@ -61,7 +61,7 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
                 // carouselConfig(3000);
                 vm.industryImg = vm.PreeminentCompany.industryImg;
             }else{
-                console.warn("优质公司的数据信息读取失败");
+                alert("优质公司的数据信息读取失败");
             }
         });
     }]);

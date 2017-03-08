@@ -9,7 +9,7 @@ app.controller('notFindCtrl', ['$scope', '$rootScope', '$state', 'jobService',
             if (res.data.code == 0) {
                 vm.eliteCompany = res.data;
             }else {
-                console.warn("notfind信息读取失败")
+                alert("notfind信息读取失败")
             }
 
         });

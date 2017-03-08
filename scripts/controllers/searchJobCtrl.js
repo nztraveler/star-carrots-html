@@ -74,7 +74,7 @@ luoboduoApp.controller('searchJobCtrl', ['$scope', '$rootScope', '$state', 'jobS
                     vm.searchJob = res.data;
                     vm.total = res.data.total;
                 }else{
-                    console.warn("职位搜索的数据信息读取失败");
+                    alert("职位搜索的数据信息读取失败");
                 }
                 // 判断找不到页面或找不到内容
                 vm.isNotFind = commonUtil.judgeNotFind(res.data);

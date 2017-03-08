@@ -30,7 +30,7 @@ luoboduoApp.controller('companyListCtrl', ['$scope', '$rootScope', '$state', 'jo
             if (res.data.code == 0) {
                 vm.eliteCompany = res.data;
             }else {
-                console.warn("公司列表信息读取失败")
+                alert("公司列表信息读取失败")
             }
 
             // 判断找不到页面或找不到内容
