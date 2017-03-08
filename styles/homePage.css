@@ -226,7 +226,7 @@ p + p {
 .home-listbox {
     background-color: #ffffff;
     border-radius: 5px;
-
+    cursor: pointer;
 }
 
 .home-listbox .font-box {
