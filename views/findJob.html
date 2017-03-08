@@ -70,7 +70,7 @@
                 <span ng-class="{'title-active':!vm.isChoose}" ng-click="exchangeJob(!vm.isChoose)">推荐职位</span>&nbsp;
                 <span ng-class="{'title-active':vm.isChoose}" ng-click="exchangeJob(vm.isChoose)">最新职位</span>
             </div>
-            <div class="col-xs-6 text-right"><span class="showMore" ui-sref="field.jobList">查看更多&gt</span></div>
+            <div class="col-xs-6 text-right"><span class="showMore" ui-sref="field.jobList({n:vm.isChoose||false})">查看更多&gt</span></div>
         </div>
         <!-- 推荐职位 -->
         <div class="new_job_wrap row" ng-if="!vm.isChoose">
