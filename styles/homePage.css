@@ -203,7 +203,7 @@ p + p {
 
 .radish-clear-pd {
     padding: 0;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 .radish-clear-pd > img {
