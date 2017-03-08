@@ -3,11 +3,14 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
         var vm = this;
         vm.params=$state.params;
         vm.params.size = 8;
+        delete sessionStorage.searchJobOptions;
         //获取职业分类数据
         jobService.getJobList().then(function(res){
             if(res.data.code==0){
                 vm.list=res.data.data;
                 console.log(vm.list);
+            }else{
+                console.warn("职业分类的数据信息读取失败");
             }
         });
         //轮播图  左右的
@@ -16,6 +19,8 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
                 vm.findJobArticle = res.data;
                 //轮播图开始3s
                 carouselConfig(3000);
+            }else{
+                console.warn("找职位左右轮播图获取失败");
             }
         });
         //获取最新职位数据
@@ -23,6 +28,8 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
                 if(res.data.code==0){
                     vm.newJobList = res.data;
                     console.log(res.data);
+                }else{
+                    console.warn("最新职位的数据信息读取失败");
                 }
             }
         );
@@ -31,6 +38,8 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
             if (res.data.code == 0) {
                 vm.recommendJobList = res.data;
                 console.log(res.data);
+            }else{
+                console.warn("推荐职位的数据信息读取失败");
             }
 
         });
@@ -39,7 +48,7 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
             if(isChoose==undefined||isChoose==false){
                 vm.isChoose=!vm.isChoose;
             }
-        }
+        };
         //  优质公司
         jobService.getCompanyList("", 1).then(function (res) {
             if (res.data.code == 0) {
@@ -51,7 +60,8 @@ angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope',
                 //推荐公司轮播图开始3s
                 // carouselConfig(3000);
                 vm.industryImg = vm.PreeminentCompany.industryImg;
-                console.log("good");
+            }else{
+                console.warn("优质公司的数据信息读取失败");
             }
         });
     }]);

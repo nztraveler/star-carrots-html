@@ -31,7 +31,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 company-card"
                          ng-repeat="x in vm.eliteCompany.data track by $index">
                         <div class="col-xs-12 company-main img-thumbnail"
-                             ui-sref="app.companyMain.companyHome({name:x.name,id:x.id})"
+                             ui-sref="field.companyMain.companyHome({name:x.name,id:x.id})"
                              ng-class="{navChoice: $state.includes('app.company.home')}">
                             <div class="company-content">
                                 <div class="middle-img-box ">

@@ -88,7 +88,7 @@
                                      ng-repeat="indexbanner in SearchJobList track by $index">
                                     <div ng-repeat="indexone in SearchJobList[$index] track by $index"
                                          class="col-lg-3 col-md-3 col-sm-12  radish-clear-pd success-case-left" >
-                                        <div class="home-listbox" >
+                                        <div class="home-listbox" ui-sref="field.jobDescription({id:indexone.id})">
                                             <div class="middle-img-box" >
                                                 <span></span>
                                                 <img src={{indexone.logo}} alt=""

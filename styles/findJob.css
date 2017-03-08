@@ -2,7 +2,7 @@
     background-color: #F6F7F8;
 }
 
-.container {
+.bg-white {
     background: white;
 }
 
@@ -208,7 +208,7 @@
 }
 /*推荐/最新职位*/
 
-.title {
+.newTitle {
     clear: both;
     overflow: hidden;
     /*margin: 0 -30px;*/
@@ -225,7 +225,7 @@
     color: black;
 }
 
-.title span {
+.newTitle span {
     cursor: pointer;
 }
 

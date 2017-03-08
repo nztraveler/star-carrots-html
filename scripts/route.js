@@ -159,7 +159,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
 
         //公司页面主页
         .state('field.companyMain.companyHome', {
-            url: '/companyHome?page&size',
+            url: '/companyHome?page&size&id',
             title: '公司主页',
             templateUrl: 'views/companyDetails/companyHome.html',
             controller: 'companyHomeCtrl',

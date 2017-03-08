@@ -1,5 +1,5 @@
 <div class="bg-gray">
-    <div class="container">
+    <div class="container bg-white">
         <div class="search_wrap row">
             <!-- searchPanel部分 -->
             <div class="search_panel_wrap hidden-xs hidden-sm">
@@ -65,7 +65,7 @@
             </div>
         </div>
         <!--推荐职位、最新职位-->
-        <div class="title row">
+        <div class="newTitle row">
             <div class="col-xs-6">
                 <span ng-class="{'title-active':!vm.isChoose}" ng-click="exchangeJob(!vm.isChoose)">推荐职位</span>&nbsp;
                 <span ng-class="{'title-active':vm.isChoose}" ng-click="exchangeJob(vm.isChoose)">最新职位</span>
@@ -107,11 +107,11 @@
             </div>
         </div>
         <!-- 推荐公司 -->
-        <div class="row title">
+        <div class="row newTitle">
             <div class="bg-grey ">
-                <a href="#" class="font-bold padding-lr-15px">推荐公司</a>
+                <span class="text-active padding-lr-15px">推荐公司</span>
                 <a href="#" ui-sref="field.searchMain.searchCompany"
-                   ng-class="{navChoice: $state.includes('field.search.searchCompany')}"
+                   ng-class="{navChoice: $state.includes('field.searchMain.searchCompany')}"
                    class=" text-right more-hover pull-right padding-lr-15px">查看更多&nbsp;>
                     <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
                 </a>
@@ -120,9 +120,9 @@
         <div class="row">
             <div class="recommend-company-wrap">
                 <div class="col-sm-4 col-xs-12 "
-                     ui-sref="app.companyMain.companyHome({id:vm.industryImg.id})"
-                     ng-class="{navChoice: $state.includes('app.company.home')}">
-                    <img src="{{vm.industryImg.industryImg}}" class="pointer findJob-recommend-img " ui-sref="field.companyDescription">
+                     ui-sref="field.companyMain.companyHome({id:vm.industryImg.id})"
+                     ng-class="{navChoice: $state.includes('field.company.home')}">
+                    <img src="{{vm.industryImg.industryImg}}" class="pointer findJob-recommend-img " ui-sref="field.companyDescription({id:vm.industryImg.id})">
                     <div class="redomend-company-text">
                         <p class="color-white word-length-limit">{{vm.industryImg.name}}</p>
                         <p class="color-white word-limit">{{vm.industryImg.slogan}}</p>
@@ -133,14 +133,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-8 col-xs-12 ">
-                    <div ng-class="{navChoice: $state.includes('app.companyMain.companyHome')}"
+                <div class="col-lg-8">
+                    <div ng-class="{navChoice: $state.includes('field.companyMain.companyHome')}"
                          class="middle-img-box findJob-recommend-logo"
                          ng-repeat="x in vm.normalCompanyList track by $index">
                         <span></span>
                         <img src={{x.logo}} alt=""
                              class="img-responsive"
-                             ui-sref="app.companyMain.companyHome({id:x.id})">
+                             ui-sref="field.companyMain.companyHome({id:x.id})">
                     </div>
                 </div>
                 <upcarousel></upcarousel>
