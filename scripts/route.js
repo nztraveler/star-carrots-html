@@ -111,6 +111,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad([
+                    'styles/searchJob.css',
                     'scripts/controllers/searchJobCtrl.js',
                     'notFind'
                 ])

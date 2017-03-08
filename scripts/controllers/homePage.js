@@ -9,8 +9,7 @@
 
 //开始获取首页banner图和最新职位数据
 
-var luoboduoApp =angular.module('luoboduoApp',[]);
-luoboduoApp.controller('homeCtrl',['$scope','$state', '$http','$stateParams','$rootScope',
+app.controller('homeCtrl',['$scope','$state', '$http','$stateParams','$rootScope',
     function ($scope,$state, $http,$stateParams,$rootScope) {
         $rootScope.$state = $state;
         $http.get("/carrots-ajax/a/article/search?type=0")

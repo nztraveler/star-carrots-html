@@ -1,5 +1,4 @@
-angular.module("luoboduoApp",[])
-.controller("searchMainCtrl",['$scope', '$rootScope', '$state', 'jobService', 'searchOptions', 'searchUtil', 'commonUtil',function ($scope, $rootScope, $state, jobService, searchOptions, searchUtil, commonUtil){
+app.controller("searchMainCtrl",['$scope', '$rootScope', '$state', 'jobService', 'searchOptions', 'searchUtil', 'commonUtil',function ($scope, $rootScope, $state, jobService, searchOptions, searchUtil, commonUtil){
 	   var vm=this;
 	   //切换按钮
         $rootScope.$state = $state;

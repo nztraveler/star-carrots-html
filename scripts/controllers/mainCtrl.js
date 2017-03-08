@@ -1,6 +1,5 @@
 'use strict';
-angular.module("luoboduoApp")
-.controller('mainCtrl', ['$scope', '$rootScope', '$state','jobService',
+app.controller('mainCtrl', ['$scope', '$rootScope', '$state','jobService',
     function ($scope, $rootScope, $state, jobService) {
         var vm = this;
         // html界面检测url中的值

@@ -1,5 +1,4 @@
-angular.module("luoboduoApp")
-	.factory('jobService', function($http, path) {
+app.factory('jobService', function($http, path) {
 		return {
 			//轮播article
 			getArticle: function(type) {

@@ -1,8 +1,7 @@
 /**
  * Created by Administrator on 2016/9/3.
  */
-angular.module("luoboduoApp")
-.directive('upcarousel', function () {
+app.directive('upcarousel', function () {
     return {
         templateUrl: "scripts/directives/upDownCarousel/upDownCarousel.html",
         restrict: "EA",

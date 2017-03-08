@@ -1,6 +1,4 @@
-angular.module("luoboduoApp")
-
-    .filter('jobTypeFilter', function(jobType) {
+app.filter('jobTypeFilter', function(jobType) {
         return function(type) {
             for (var i = 0; i < jobType.length; i++) {
                 if (type == jobType[i].type) {

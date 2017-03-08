@@ -1,5 +1,4 @@
-angular.module('luoboduoApp')
-    .factory('path', function($http, $state) {
+app.factory('path', function($http, $state) {
         return {
             //轮播article
             article_url: function(type) {

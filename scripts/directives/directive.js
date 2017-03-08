@@ -1,6 +1,5 @@
-var myApp=angular.module("luoboduoApp",[]);
 // 导航轮播
-myApp.directive('navCarousel', function (requestData) {
+app.directive('navCarousel', function (requestData) {
         return {
             restrict: 'E',
             templateUrl: 'template/navCarousel.html',

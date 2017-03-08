@@ -1,5 +1,4 @@
-var luoboduoApp =angular.module('luoboduoApp',[]);
-luoboduoApp.directive('pagination', function ($state) {
+angular.module("luoboduoApp",[]).directive('pagination', function ($state) {
     return {
         restrict: 'EA',
         templateUrl: 'scripts/directives/fsp-paging/pagination.html',

@@ -1,6 +1,5 @@
 'use strict';
-var luoboduoApp =angular.module('luoboduoApp',[]);
-luoboduoApp.controller('searchJobCtrl', ['$scope', '$rootScope', '$state', 'jobService', 'searchOptions', 'searchUtil', 'commonUtil',
+app.controller('searchJobCtrl', ['$scope', '$rootScope', '$state', 'jobService', 'searchOptions', 'searchUtil', 'commonUtil',
     function ($scope, $rootScope, $state, jobService, searchOptions, searchUtil, commonUtil) {
         var vm = this;
         var searchOptionsCopy = angular.copy(searchOptions);

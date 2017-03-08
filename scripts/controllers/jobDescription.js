@@ -1,5 +1,4 @@
-angular.module("luoboduoApp")
-.controller("jobDescriptionCtrl", ["$scope", "$rootScope","$state", "jobService",function ($scope, $rootScope, $state, jobService) {
+app.controller("jobDescriptionCtrl", ["$scope", "$rootScope","$state", "jobService",function ($scope, $rootScope, $state, jobService) {
     var vm = this;
     vm.id = $state.params.id;
     console.log(vm.id);

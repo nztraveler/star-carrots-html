@@ -1,5 +1,4 @@
 // 搜索面板;
-var app=angular.module("luoboduoApp");
 app.constant('searchOptions', {
     province: [
         {name: '不限', choose: true},

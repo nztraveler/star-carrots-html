@@ -1,5 +1,4 @@
-var luoboduoApp =angular.module('luoboduoApp',[]);
-luoboduoApp.factory('commonUtil', function ($rootScope, $state, searchOptions, $location) {
+app.factory('commonUtil', function ($rootScope, $state, searchOptions, $location) {
     return {
         pageDefault: {page: 1, size: 10, next: true},
 

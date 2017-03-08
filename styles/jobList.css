@@ -17,3 +17,9 @@
     align-items: center;
 }
 
+@media screen and (max-width: 435px){
+    .search-content .middle-img-box{
+        display: none;
+    }
+}
+

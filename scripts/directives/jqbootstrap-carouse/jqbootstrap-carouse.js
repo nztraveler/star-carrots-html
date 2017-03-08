@@ -1,8 +1,7 @@
 /**
  * Created by shuli on 2016/10/28.
  */
-var luoboduoApp =angular.module('luoboduoApp',[]);
-luoboduoApp.directive('jqcarouse', function ($state, jobService) {
+app.directive('jqcarouse', function ($state, jobService) {
     return {
         restrict: 'EA',
         templateUrl: 'scripts/directives/jqbootstrap-carouse/jqbootstrap-carouse.html',

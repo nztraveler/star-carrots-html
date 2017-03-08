@@ -1,6 +1,5 @@
 'use strict';
-angular.module('luoboduoApp')
-    .factory('commonUtil', function ($rootScope, $state, $http) {
+app.factory('commonUtil', function ($rootScope, $state, $http) {
         return {
             pageDefault: {page: 1, size: 10, next: true},
 

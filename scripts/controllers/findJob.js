@@ -1,4 +1,4 @@
-angular.module("luoboduoApp").controller('findJobCtrl', ['$scope', '$rootScope', '$state', 'jobService',
+app.controller('findJobCtrl', ['$scope', '$rootScope', '$state', 'jobService',
     function ($scope, $rootScope, $state, jobService) {
         var vm = this;
         vm.params=$state.params;

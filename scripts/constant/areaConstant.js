@@ -1,8 +1,7 @@
 'use strict';
-angular.module('luoboduoApp')
 // 将获取到的省市区ID过滤成文字
 
-    .filter('provinceFilter', function (PROVINCE) {
+    app.filter('provinceFilter', function (PROVINCE) {
         return function (id) {
             if (id != undefined && id != '') {
 

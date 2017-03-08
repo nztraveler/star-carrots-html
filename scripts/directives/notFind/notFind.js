@@ -4,8 +4,7 @@
 // 事例：
 // <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="3"></not-find>
 // showrecommend属性值为company显示推荐公司，为position时显示推荐职位。为null时不显示。 size属性控制推荐内容的个数。
-var luoboduoApp =angular.module('luoboduoApp',[]);
-luoboduoApp.directive('notFind', function ($state, jobService) {
+app.directive('notFind', function ($state, jobService) {
     return {
         restrict: 'EA',
         templateUrl: 'scripts/directives/notFind/notFind.html',
