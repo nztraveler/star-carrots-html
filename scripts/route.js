@@ -21,8 +21,8 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state('field', {
             url: '',
             templateUrl: 'views/main.html',
-            // controller:"mainCtrl",
-            // controllerAs: 'vm',
+            controller:"mainCtrl",
+            controllerAs: 'vm',
             abstract: true, // true 表明此状态不能被显性激活，只能被子状态隐性激活
             resolve: {
                 loadMyFile: _lazyLoad([
