@@ -251,9 +251,9 @@
 		text-align: left
 	}
 
-	.footer-top {
-		padding-left: 5%
-	}
+	/*.footer-top {*/
+		/*padding-left: 5%*/
+	/*}*/
 
 	.disHidden {
 		display: none;

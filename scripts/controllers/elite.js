@@ -3,7 +3,7 @@
  */
 
 var luoboduoApp =angular.module('luoboduoApp',[]);
-luoboduoApp.controller('eliteCtrl',['$scope','$state', '$http','$stateParams', 
+luoboduoApp.controller('eliteCtrl',['$scope','$state', '$http','$stateParams',
   function ($scope,$state, $http,$stateParams) {
     $http.get("/carrots-ajax/a/article/search?type=2")
     .success(function (response) {
@@ -15,6 +15,8 @@ luoboduoApp.controller('eliteCtrl',['$scope','$state', '$http','$stateParams',
         $scope.findElite = response.data;
         console.log(response.data);
     });
-    
-    
+
+
 }]);
+
+

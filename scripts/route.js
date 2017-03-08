@@ -26,7 +26,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             abstract: true, // true 表明此状态不能被显性激活，只能被子状态隐性激活
             resolve: {
                 loadMyFile: _lazyLoad([
-                    'styles/index.css',
+                    'styles/main.css',
                     // 'scripts/controllers/mainCtrl.js',
                     'scripts/directives/fsp-paging/pagination.js',
                 ])
@@ -62,6 +62,8 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state("field.about", {
             url: "/about?status",
             templateUrl: "views/about.html",
+            controller: 'aboutCtrl',
+            controllerAs:"vm",
             resolve: {
                 loadMyFile:_lazyLoad([
                     'scripts/controllers/about.js',
