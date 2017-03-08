@@ -22,3 +22,7 @@
     background-color: #EB5255;
     color:white;
 }
+
+.tag-bottom {
+    border-bottom: 2px solid rgb(235, 82, 85);
+}
