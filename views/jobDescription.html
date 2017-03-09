@@ -40,8 +40,8 @@
                 <h4 class="text-center"><a ui-sref="field.companyMain.companyHome({id:vm.jobDescription.data.companyId})">{{vm.jobDescription.data.companyName}}
                     <img src="../images/company-home-1.png" alt=""></a></h4>
                 <p class="base-msg">基本信息<span class="sidebar-split-line"></span></p>
-                <p class="industry"><img src="../images/people.png">&emsp;{{vm.jobDescription.data.totalNum}}人</p>
-                <p class="industry">
+                <p class="industryContent"><img src="../images/people.png">&emsp;{{vm.jobDescription.data.totalNum}}人</p>
+                <p class="industryContent">
                     <img src="../images/company-home-3.png">&emsp;
                     <span ng-repeat="tota in vm.jobDescription.data.industryList track by $index"><span ng-if="!$first">/</span> {{tota.industry|industryFilter}}</span></p>
             </div>
