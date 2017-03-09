@@ -162,7 +162,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
 
         //公司页面主页
         .state('field.companyMain.companyHome', {
-            url: '/companyHome?page&size&id',
+            url: '/companyHome',
             title: '公司主页',
             templateUrl: 'views/companyDetails/companyHome.html',
             controller: 'companyHomeCtrl',
@@ -176,7 +176,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         })
         //在招职位页面
         .state('field.companyMain.hiringJobs', {
-            url: '/hiringJobs?page&size',
+            url: '/hiringJobs',
             title: '在招职位',
             templateUrl: 'views/companyDetails/hiringJobs.html',
             controller: 'hiringJobsCtrl',
