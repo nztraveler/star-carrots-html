@@ -17,8 +17,6 @@ app.controller('homeCtrl',['$scope','$state', '$http','$stateParams','$rootScope
             if (res.data.code == 0) {
                 $scope.datas = res.data.data.articleList;
 
-            }
-
                 var bannerArrs = [];
                 for (i = 0; i < 2; i++) {
                     bannerArrs[i] = $scope.datas.slice(0, 1);
@@ -27,11 +25,25 @@ app.controller('homeCtrl',['$scope','$state', '$http','$stateParams','$rootScope
                 console.log(bannerArrs);
 
                 $scope.SearchBanner=bannerArrs
+
+            }else{
+                bootbox.alert({
+                    buttons: {
+                        ok: {
+                            label: '关闭',
+                            className: 'btn-danger'
+                        }
+                    },
+                    message: '首页banner图：'+res.data.message,
+                    title: "提示"
+                });
+            }
+
+
             });
-        // $http.get("/carrots-ajax/a/profession/search?size=20")
-        //     .success(function(response){
-        //         $scope.newPost =response.data;
-        //         console.log(response.data);
+
+
+
         //读取最新职位并拆分
         var vm = this;
         vm.params = $state.params;
@@ -39,9 +51,6 @@ app.controller('homeCtrl',['$scope','$state', '$http','$stateParams','$rootScope
         jobService.getSearchJob(vm.params).then(function (res) {
             if (res.data.code == 0) {
                 $scope.newPost =res.data.data;
-            }
-
-
 
                 var bannerArr = [];
                 for (i = 0; i < 5; i++) {
@@ -55,10 +64,23 @@ app.controller('homeCtrl',['$scope','$state', '$http','$stateParams','$rootScope
                 $('.carousel').carousel({
                     interval: 3000
                 })
+            }else{
+                bootbox.alert({
+                    buttons: {
+                        ok: {
+                            label: '关闭',
+                            className: 'btn-danger'
+                        }
+                    },
+                    message: '最新职位：'+res.data.message,
+                    title: "提示"
+                });
+            }
+
+
+
+
             });
-
-
-
 
     }]);
 
