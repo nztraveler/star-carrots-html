@@ -46,13 +46,14 @@
     margin:0 2px 1px 0;
 }
 .company-welfare{
-    max-width:450px;
+    max-width:700px;
 }
 .company-welfare span{
     /*margin:7px 16px 7px 0;*/
     border: 1px solid #f2f2f2;
     border-radius:12px;
-    width:70px;
+    /*width:70px;*/
+    margin-bottom:10px;
     line-height: 20px;
     color:#a3aebb;
     text-align: center;
