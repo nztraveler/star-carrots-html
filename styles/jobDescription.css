@@ -129,5 +129,55 @@
         margin-top:24px;
     }
 }
+/*模态窗口*/
+.modal-header-style {
+    background-color: #FC2A48;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+div.model-main{
+    margin-top:0;
+    width: auto;
+    height:auto;
+}
+.modal-content p{
+    font-weight:normal;
+    line-height:1.428;
+}
+.modal-close-style {
+    color: white;
+    opacity: 1;
+    margin-top: 0 !important;
+}
 
+.modal-body-title {
+    color: #333333;
+    font-size: 16px;
+}
+.modal-content p.modal-title{
+    font-size: 18px;
+    line-height: 1.428;
+}
+.modal-body-content {
+    color: #666666;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.modal-btn-style, .modal-btn-style:focus {
+    background-color: #fc2b47;
+    color: white;
+    width: 18%;
+    min-width: 90px;
+    height: 40px;
+    float: right;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    z-index: 10;
+    outline: none;
+}
 
