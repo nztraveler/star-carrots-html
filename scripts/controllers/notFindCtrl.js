@@ -9,7 +9,16 @@ app.controller('notFindCtrl', ['$scope', '$rootScope', '$state', 'jobService',
             if (res.data.code == 0) {
                 vm.eliteCompany = res.data;
             }else {
-                alert("notfind信息读取失败")
+                bootbox.alert({
+                    buttons: {
+                        ok: {
+                            label: '关闭',
+                            className: 'btn-danger'
+                        }
+                    },
+                    message: 'notFind：'+res.data.message,
+                    title: "提示"
+                });
             }
 
         });

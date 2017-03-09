@@ -29,7 +29,16 @@ app.controller('companyListCtrl', ['$scope', '$rootScope', '$state', 'jobService
             if (res.data.code == 0) {
                 vm.eliteCompany = res.data;
             }else {
-                alert("公司列表信息读取失败")
+                bootbox.alert({
+                    buttons: {
+                        ok: {
+                            label: '关闭',
+                            className: 'btn-danger'
+                        }
+                    },
+                    message: '公司列表：'+res.data.message,
+                    title: "提示"
+                });
             }
 
             // 判断找不到页面或找不到内容

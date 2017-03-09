@@ -44,7 +44,16 @@ app.controller('jobListCtrl', ['$scope', '$rootScope', '$state', 'jobService', '
             if (res.data.code === 0) {
                 vm.jobList = res.data;
             }else{
-                alert("职位搜索的数据信息读取失败");
+                bootbox.alert({
+                    buttons: {
+                        ok: {
+                            label: '关闭',
+                            className: 'btn-danger'
+                        }
+                    },
+                    message: '职位搜索：'+res.data.message,
+                    title: "提示"
+                });
             }
 
             // 判断找不到页面或找不到内容

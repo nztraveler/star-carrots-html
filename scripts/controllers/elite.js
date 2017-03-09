@@ -4,6 +4,7 @@
 
 app.controller('eliteCtrl',['$scope','$state', '$http','$stateParams',
   function ($scope,$state, $http,$stateParams) {
+      delete sessionStorage.companyListOptions;
     $http.get("/carrots-ajax/a/article/search?type=2")
     .success(function (response) {
         $scope.datas = response.data.articleList;

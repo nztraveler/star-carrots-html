@@ -73,13 +73,21 @@ app.controller('searchJobCtrl', ['$scope', '$rootScope', '$state', 'jobService',
                     vm.searchJob = res.data;
                     vm.total = res.data.total;
                 }else{
-                    alert("职位搜索的数据信息读取失败");
+                    bootbox.alert({
+                        buttons: {
+                            ok: {
+                                label: '关闭',
+                                className: 'btn-danger'
+                            }
+                        },
+                        message: '搜索职位：'+res.data.message,
+                        title: "提示"
+                    });
                 }
                 // 判断找不到页面或找不到内容
                 vm.isNotFind = commonUtil.judgeNotFind(res.data);
                 // 找不到内容时，是否推荐
                 vm.isShowRecommend = "position"
-            }
-        );
+            });
     }
 ]);

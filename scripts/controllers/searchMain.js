@@ -38,7 +38,16 @@ app.controller("searchMainCtrl",['$scope', '$rootScope', '$state', 'jobService',
             if (res.data.code == 0) {
                 vm.companyList = res.data;
             }else{
-                alert("公司搜索的数据信息读取失败");
+                bootbox.alert({
+                    buttons: {
+                        ok: {
+                            label: '关闭',
+                            className: 'btn-danger'
+                        }
+                    },
+                    message: '公司搜索：'+res.data.message,
+                    title: "提示"
+                });
             }
             // 判断找不到页面或找不到内容
             vm.isNotFind = commonUtil.judgeNotFind(res.data);
@@ -51,7 +60,16 @@ app.controller("searchMainCtrl",['$scope', '$rootScope', '$state', 'jobService',
                     vm.searchJob = res.data;
                     vm.total = res.data.total;
                 }else{
-                    alert("职位搜索的数据信息读取失败");
+                    bootbox.alert({
+                        buttons: {
+                            ok: {
+                                label: '关闭',
+                                className: 'btn-danger'
+                            }
+                        },
+                        message: '职位搜索：'+res.data.message,
+                        title: "提示"
+                    });
                 }
                 // 判断找不到页面或找不到内容
                 vm.isNotFind = commonUtil.judgeNotFind(res.data);

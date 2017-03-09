@@ -23,7 +23,16 @@ app.controller("jobDescriptionCtrl", ["$scope", "$rootScope","$state", "jobServi
                 // vm.url = "http://carrots.ptteng.com/sharing-page/sharing-page.html?id=" + vm.jobDescription.id;
                 console.log(vm.jobDescription);
             } else{
-                alert("职位详情的数据信息读取失败");
+                bootbox.alert({
+                    buttons: {
+                        ok: {
+                            label: '关闭',
+                            className: 'btn-danger'
+                        }
+                    },
+                    message: '职位详情：'+res.data.message,
+                    title: "提示"
+                });
             }
         }
     );
