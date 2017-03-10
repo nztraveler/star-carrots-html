@@ -19,7 +19,7 @@
                         <div class="col-md-4 col-sm-6 col-xs-12 company-card"
                              ng-repeat="x in eliteCompany.data track by $index">
                             <div class="col-xs-12 company-main img-thumbnail"
-                                 ui-sref="app.companyMain.companyHome({id:x.id})"
+                                 ui-sref="field.companyMain.companyHome({id:x.id})"
                                  ng-class="{navChoice: $state.includes('app.company.home')}">
                                 <div class="company-content">
                                     <div class="middle-img-box ">
@@ -61,7 +61,7 @@
                         <div class="col-md-4 col-sm-6 col-xs-12 company-card"
                              ng-repeat="x in elitePosition.data track by $index">
                             <div class="col-xs-12 company-main img-thumbnail"
-                                 ui-sref="app.jobDescription({id:x.id})"
+                                 ui-sref="field.jobDescription({id:x.id})"
                                  ng-class="{navChoice: $state.includes('app.company.home')}">
                                 <div class="company-content ">
                                     <div class="middle-img-box ">
