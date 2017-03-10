@@ -4,6 +4,7 @@ app.controller('findJobCtrl', ['$scope', '$rootScope', '$state', 'jobService',
         vm.params=$state.params;
         vm.params.size = 8;
         delete sessionStorage.searchJobOptions;
+        delete sessionStorage.jobListOptions;
         //获取职业分类数据
         jobService.getJobList().then(function(res){
             if(res.data.code==0){

@@ -11,6 +11,7 @@
 
 app.controller('homeCtrl',['$scope','$state', '$http','$stateParams','$rootScope','jobService',
     function ($scope,$state, $http,$stateParams,$rootScope,jobService) {
+        delete sessionStorage.jobListOptions;
         $rootScope.$state = $state;
         //读取首页banner
         jobService.getArticle(0).then(function (res) {
