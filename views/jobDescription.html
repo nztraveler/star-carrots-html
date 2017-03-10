@@ -36,9 +36,13 @@
             </div>
             <!--公司基本信息-->
             <div class="col-xs-12 col-sm-4 company-msg">
-                <img src="{{vm.jobDescription.data.logo}}" alt="" class="img-responsive">
-                <h4 class="text-center"><a ui-sref="field.companyMain.companyHome({id:vm.jobDescription.data.companyId})">{{vm.jobDescription.data.companyName}}
-                    <img src="../images/company-home-1.png" alt=""></a></h4>
+                <div class="middle-img-box img-center">
+                    <img src="{{vm.jobDescription.data.logo}}" alt="" class="img-responsive img-pointer" ui-sref="field.companyMain.companyHome({id:vm.jobDescription.data.companyId})">
+                </div>
+                <h4 class="text-center">
+                    <span class="company-text">{{vm.jobDescription.data.companyName}}
+                    <img src="../images/company-home-1.png" alt=""></span>
+                </h4>
                 <p class="base-msg">基本信息<span class="sidebar-split-line"></span></p>
                 <p class="industryContent"><img src="../images/people.png">&emsp;{{vm.jobDescription.data.totalNum}}人</p>
                 <p class="industryContent">
