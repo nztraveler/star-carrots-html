@@ -2,6 +2,7 @@
 app.controller('companyListCtrl', ['$scope', '$rootScope', '$state', 'jobService', 'searchOptions', 'searchUtil', 'commonUtil',
     function ($scope, $rootScope, $state, jobService, searchOptions, searchUtil, commonUtil) {
         var vm = this;
+        commonUtil.scrollTo(0, 0);
         // 取值
         vm.option = commonUtil.judegesessionStorage(sessionStorage.companyListOptions, searchOptions);
         //标签多选

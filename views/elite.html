@@ -1,54 +1,38 @@
+<link rel="stylesheet" type="text/css" href="styles/elite.css">
 
+<div ng-controller="eliteCtrl"></div>
 <div class="col-md-12 col-xs-12 elite-title mg-top--20">
-    <!--<div class="banner elite-banner">-->
-        <!--<div id="carousel-example-generic" class="carousel slide"-->
-             <!--data-ride="carousel">-->
-            <!--&lt;!&ndash; 轮播（Carousel）指标 &ndash;&gt;-->
-            <!--&lt;!&ndash;<ol class="carousel-indicators">&ndash;&gt;-->
-            <!--&lt;!&ndash;<li class="mg-left-right-10" data-target="#carousel-example-generic" data-slide-to={{$index}}&ndash;&gt;-->
-            <!--&lt;!&ndash;ng-repeat="homeArticle in vm.findEliteArticle.data.articleList track by $index"&ndash;&gt;-->
-            <!--&lt;!&ndash;ng-class="{'active':$first}"></li>&ndash;&gt;-->
-            <!--&lt;!&ndash;</ol>&ndash;&gt;-->
-            <!--&lt;!&ndash;内容&ndash;&gt;-->
-            <!--<div class="carousel-inner" role="listBox">-->
-                <!--<div class="item" ng-repeat="eliteArticle in datas "-->
-                     <!--ng-class="{'active':$first}">-->
-                    <!--<img data-target="#home-top-carousel" src={{eliteArticle.img}} alt=""-->
-                         <!--href={{eliteArticle.url}}>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--&lt;!&ndash; Controls &ndash;&gt;-->
-            <!--&lt;!&ndash;<a ng-non-bindable class="left carousel-control carousel-butten"&ndash;&gt;-->
-            <!--&lt;!&ndash;href="#carousel-example-generic" role="button"&ndash;&gt;-->
-            <!--&lt;!&ndash;data-slide="prev"&ndash;&gt;-->
-            <!--&lt;!&ndash;onclick="return false">&ndash;&gt;-->
-            <!--&lt;!&ndash;<span aria-hidden="true"><img src="../images/pre-1.png" alt=""></span>&ndash;&gt;-->
-            <!--&lt;!&ndash;</a>&ndash;&gt;-->
-            <!--&lt;!&ndash;<a ng-non-bindable class="right carousel-control carousel-butten"&ndash;&gt;-->
-            <!--&lt;!&ndash;href="#carousel-example-generic" role="button"&ndash;&gt;-->
-            <!--&lt;!&ndash;data-slide="next"&ndash;&gt;-->
-            <!--&lt;!&ndash;onclick="return false">&ndash;&gt;-->
-            <!--&lt;!&ndash;<span aria-hidden="true"><img src="../images/next-1.png" alt=""></span>&ndash;&gt;-->
-            <!--&lt;!&ndash;</a>&ndash;&gt;-->
-        <!--</div>-->
-    <!--</div>-->
-    <div id="bn" class="carousel slide" data-ride="carousel" >
-        <div class="position-carousel-inner" >
-            <div class="carousel-inner" role="listbox">
-                <div class="clear-pd item" ng-class="{'active':$first}"
-                     ng-repeat="banners in EliteBanner track by $index">
-                    <div ng-repeat= "eliteArticle in EliteBanner[$index] track by $index"
-                         class="col-lg-12 col-md-12 col-sm-12  radish-clear-pd success-case-left" >
-                        <img src="{{eliteArticle.img}}" alt="" href={{eliteArticle.url}} >
-                    </div>
+    <div class="banner elite-banner">
+        <div id="carousel-example-generic" class="carousel slide"
+             data-ride="carousel">
+            <!-- 轮播（Carousel）指标 -->
+            <!--<ol class="carousel-indicators">-->
+            <!--<li class="mg-left-right-10" data-target="#carousel-example-generic" data-slide-to={{$index}}-->
+            <!--ng-repeat="homeArticle in vm.findEliteArticle.data.articleList track by $index"-->
+            <!--ng-class="{'active':$first}"></li>-->
+            <!--</ol>-->
+            <!--内容-->
+            <div class="carousel-inner" role="listBox">
+                <div class="item" ng-repeat="eliteArticle in datas "
+                     ng-class="{'active':$first}">
+                    <img data-target="#home-top-carousel" src={{eliteArticle.img}} alt=""
+                         href={{eliteArticle.url}}>
                 </div>
             </div>
+            <!-- Controls -->
+            <!--<a ng-non-bindable class="left carousel-control carousel-butten"-->
+            <!--href="#carousel-example-generic" role="button"-->
+            <!--data-slide="prev"-->
+            <!--onclick="return false">-->
+            <!--<span aria-hidden="true"><img src="../images/pre-1.png" alt=""></span>-->
+            <!--</a>-->
+            <!--<a ng-non-bindable class="right carousel-control carousel-butten"-->
+            <!--href="#carousel-example-generic" role="button"-->
+            <!--data-slide="next"-->
+            <!--onclick="return false">-->
+            <!--<span aria-hidden="true"><img src="../images/next-1.png" alt=""></span>-->
+            <!--</a>-->
         </div>
-        <!--<a class="carousel-control left " href="#bn"-->
-        <!--data-slide="prev"><p>&lsaquo;</p></a>-->
-        <!--<a class="carousel-control right" href="#bn"-->
-        <!--data-slide="next"><p>&rsaquo;</p></a>-->
-
     </div>
 </div>
 <main class="container-fluid elite-main">

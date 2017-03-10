@@ -2,8 +2,8 @@
  * Created by NANA on 2017/2/21.
  */
 
-app.controller('eliteCtrl',['$scope','$state', '$http','$stateParams',
-  function ($scope,$state, $http,$stateParams) {
+app.controller('eliteCtrl',['$scope','$state', '$http','$stateParams','jobService',
+  function ($scope,$state, $http,$stateParams,jobService) {
       delete sessionStorage.companyListOptions;
 
       //banner读取
