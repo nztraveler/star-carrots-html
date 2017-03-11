@@ -594,4 +594,10 @@ p + p {
     right: 0;
 }
 
+/*首页banner图鼠标手*/
+.hand{
+    cursor: pointer;
+}
+
+
 

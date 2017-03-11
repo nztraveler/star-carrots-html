@@ -76,8 +76,9 @@
     font-size:16px;
 }
 .jobDescription-detail-box .descriptionDetail{
-    padding-bottom: 24px;
+
     background-color: white;
+    padding: 0 0 24px 0;
     border: none;
     color:#536A82;
     font-size:14px;

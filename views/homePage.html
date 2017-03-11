@@ -11,8 +11,8 @@
    <div id="bn" class="carousel slide" data-ride="carousel" >
         <div class="position-carousel-inner" >
             <div class="carousel-inner" role="listbox">
-                <div class="clear-pd item" ng-class="{'active':$first}"
-                     ng-repeat="banners in SearchBanner track by $index">
+                <div class="clear-pd item hand" ng-class="{'active':$first}"
+                     ng-repeat="banners in SearchBanner track by $index" ui-sref="field.findJob">
                     <div ng-repeat= "homeArticle in SearchBanner[$index] track by $index"
                          class="col-lg-12 col-md-12 col-sm-12  radish-clear-pd success-case-left" >
                         <img src="{{homeArticle.img}}" alt="" href={{homeArticle.url}} >
