@@ -599,6 +599,7 @@ div > ul.pagination > li > a {
 
 .edit-area-text {
     background-color: white;
+    padding: 0;
     border: none;
     width: 100%;
     white-space: pre-wrap;

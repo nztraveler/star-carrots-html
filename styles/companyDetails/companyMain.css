@@ -79,7 +79,7 @@ main {
 }
 
 .company-title {
-
+    border-left: 5px solid #fc2b47;
     margin: 20px 0 15px 0;
     line-height: 18px;
 }
